@@ -4,7 +4,7 @@ use App\Models\Client;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
 });
 
