@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Filament\Resources\Services\Schemas;
+
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Schema;
+
+class ServiceForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                TextInput::make('title')
+                    ->required(),
+                TextInput::make('slug')
+                    ->required()
+                    ->unique(ignoreRecord: true),
+                Textarea::make('short_description')
+                    ->required()
+                    ->columnSpanFull(),
+                \Filament\Forms\Components\RichEditor::make('description')
+                    ->required()
+                    ->columnSpanFull(),
+                TextInput::make('icon'),
+                Toggle::make('is_active')
+                    ->required(),
+            ]);
+    }
+}
