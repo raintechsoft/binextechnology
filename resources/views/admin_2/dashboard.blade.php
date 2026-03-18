@@ -4,53 +4,50 @@
 
 @section('content')
 <div class="mb-6">
-    <h1 class="text-2xl font-bold text-gray-800">Welcome to the Admin Dashboard</h1>
-    <p class="text-gray-500 text-sm mt-1">Here is an overview of your application.</p>
+    <h1 class="text-2xl font-bold text-gray-100">Welcome to the Admin Dashboard</h1>
+    <p class="text-gray-400 text-sm mt-1">Here is an overview of your application.</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
     <!-- Stat Card 1 -->
-    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
+    <div class="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6 flex flex-col hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-4">
-            <h3 class="text-gray-500 font-medium text-sm">Total Services</h3>
+            <h3 class="text-gray-400 font-medium text-sm">Total Services</h3>
             <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
                 <i class="fas fa-cubes"></i>
             </div>
         </div>
         <div class="flex items-baseline gap-2">
-            <span class="text-3xl font-bold text-gray-800">{{ \App\Models\Service::count() }}</span>
+            <span class="text-3xl font-bold text-gray-100">{{ \App\Models\Service::count() }}</span>
         </div>
     </div>
 
     <!-- Stat Card 2 -->
-    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
+    <div class="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6 flex flex-col hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-4">
-            <h3 class="text-gray-500 font-medium text-sm">Total Clients</h3>
+            <h3 class="text-gray-400 font-medium text-sm">Total Clients</h3>
             <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
                 <i class="fas fa-users"></i>
             </div>
         </div>
         <div class="flex items-baseline gap-2">
-            <span class="text-3xl font-bold text-gray-800">{{ \App\Models\Client::count() }}</span>
+            <span class="text-3xl font-bold text-gray-100">{{ \App\Models\Client::count() }}</span>
         </div>
     </div>
 
     <!-- Stat Card 3 -->
-    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow">
+    <div class="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6 flex flex-col hover:shadow-md transition-shadow">
         <div class="flex items-center justify-between mb-4">
-            <h3 class="text-gray-500 font-medium text-sm">New Messages</h3>
+            <h3 class="text-gray-400 font-medium text-sm">New Messages</h3>
             <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
                 <i class="fas fa-envelope"></i>
             </div>
         </div>
         <div class="flex items-baseline gap-2">
-            <span class="text-3xl font-bold text-gray-800">{{ \App\Models\ContactSubmission::count() }}</span>
+            <span class="text-3xl font-bold text-gray-100">{{ \App\Models\ContactSubmission::count() }}</span>
         </div>
     </div>
 </div>
 
-<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-    <h2 class="text-lg font-bold text-gray-800 mb-4">Quick Limits Setup Information</h2>
-    <p class="text-gray-600 mb-4">The `admin_2` panel is currently in development. Navigate using the sidebar as new modules are fully activated.</p>
-</div>
+
 @endsection
