@@ -19,5 +19,5 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('services', ServiceController::class)->except(['show']);
     Route::resource('clients', ClientController::class)->except(['show']);
-    Route::resource('contact_submissions', ContactSubmissionController::class)->only(['index', 'destroy']);
+    Route::resource('contact_submissions', ContactSubmissionController::class)->except(['show']);
 });

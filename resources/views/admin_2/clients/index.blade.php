@@ -19,8 +19,7 @@
             <thead class="uppercase tracking-wider border-b border-gray-100 bg-gray-50 text-gray-500">
                 <tr>
                     <th scope="col" class="px-6 py-4 font-medium">Image</th>
-                    <th scope="col" class="px-6 py-4 font-medium">Name</th>
-                    <th scope="col" class="px-6 py-4 font-medium">Description</th>
+                    <th scope="col" class="px-6 py-4 font-medium">Client Name</th>
                     <th scope="col" class="px-6 py-4 font-medium">Status</th>
                     <th scope="col" class="px-6 py-4 font-medium text-right">Actions</th>
                 </tr>
@@ -38,13 +37,6 @@
                         @endif
                     </td>
                     <td class="px-6 py-4 font-medium text-gray-900">{{ $client->name }}</td>
-                    <td class="px-6 py-4 text-gray-500">
-                        @if($client->description)
-                            {{ Str::limit($client->description, 50) }}
-                        @else
-                            -
-                        @endif
-                    </td>
                     <td class="px-6 py-4">
                         @if($client->is_active)
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
@@ -73,7 +65,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="5" class="px-6 py-8 text-center text-gray-500">
+                    <td colspan="4" class="px-6 py-8 text-center text-gray-500">
                         <div class="flex flex-col items-center">
                             <i class="fas fa-users text-4xl mb-3 text-gray-300"></i>
                             <p>No clients found.</p>

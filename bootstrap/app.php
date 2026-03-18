@@ -18,7 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
         },
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->redirectGuestsTo(fn (\Illuminate\Http\Request $request) => route('admin_2.login'));
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

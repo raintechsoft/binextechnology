@@ -19,6 +19,7 @@
             <thead class="uppercase tracking-wider border-b border-gray-100 bg-gray-50 text-gray-500">
                 <tr>
                     <th scope="col" class="px-6 py-4 font-medium">Title</th>
+                    <th scope="col" class="px-6 py-4 font-medium">Description</th>
                     <th scope="col" class="px-6 py-4 font-medium">Image</th>
                     <th scope="col" class="px-6 py-4 font-medium">Status</th>
                     <th scope="col" class="px-6 py-4 font-medium text-right">Actions</th>
@@ -28,6 +29,11 @@
                 @forelse($services as $service)
                 <tr class="hover:bg-gray-50 transition-colors">
                     <td class="px-6 py-4 font-medium text-gray-900">{{ $service->title }}</td>
+                    <td class="px-6 py-4 text-gray-600 max-w-md whitespace-normal">
+                        <div class="line-clamp-3 overflow-hidden text-sm [&>ul]:list-disc [&>ul]:pl-5 [&>ol]:list-decimal [&>ol]:pl-5">
+                            {!! $service->description !!}
+                        </div>
+                    </td>
                     <td class="px-6 py-4">
                         @if($service->image)
                             <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="h-10 w-10 object-cover rounded shadow-sm border border-gray-200 bg-white">
@@ -65,7 +71,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="4" class="px-6 py-8 text-center text-gray-500">
+                    <td colspan="5" class="px-6 py-8 text-center text-gray-500">
                         <div class="flex flex-col items-center">
                             <i class="fas fa-inbox text-4xl mb-3 text-gray-300"></i>
                             <p>No services found.</p>

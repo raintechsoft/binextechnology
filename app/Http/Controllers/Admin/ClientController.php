@@ -24,7 +24,6 @@ class ClientController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'required|string',
             'logo' => 'required|image|max:2048', // 2MB max
             'is_active' => 'boolean',
         ]);
@@ -56,7 +55,6 @@ class ClientController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'required|string',
             'logo' => 'nullable|image|max:2048', // optional on update
             'is_active' => 'boolean',
         ]);

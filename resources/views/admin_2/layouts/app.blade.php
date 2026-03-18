@@ -51,7 +51,7 @@
                 <li>
                     <a href="{{ route('admin_2.contact_submissions.index') }}" class="sidebar-link flex items-center px-6 py-3 text-gray-600 {{ request()->routeIs('admin_2.contact_submissions.*') ? 'active' : '' }}">
                         <i class="fas fa-envelope w-6"></i>
-                        <span class="font-medium">Messages</span>
+                        <span class="font-medium">Contacts / Social Media</span>
                     </a>
                 </li>
             </ul>
@@ -84,6 +84,14 @@
                         {{ substr(auth()->user()->name ?? 'A', 0, 1) }}
                     </div>
                     <span class="font-medium text-sm hidden sm:block">{{ auth()->user()->name ?? 'Admin' }}</span>
+                </div>
+                <div class="border-l border-gray-200 pl-4">
+                    <form action="{{ route('admin_2.logout') }}" method="POST" class="inline">
+                        @csrf
+                        <button type="submit" class="text-gray-500 hover:text-red-600 transition-colors" title="Logout">
+                            <i class="fas fa-sign-out-alt text-lg"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>
