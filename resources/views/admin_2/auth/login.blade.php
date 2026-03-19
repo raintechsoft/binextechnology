@@ -31,25 +31,25 @@
         <div class="glass-panel rounded-2xl p-8 shadow-2xl">
             <div class="text-center mb-8">
                 <h1 class="text-3xl font-bold mb-2">Welcome Back</h1>
-                <p class="text-gray-400">Sign in to the Admin Panel</p>
+                <p class="text-gray-500">Sign in to the Admin Panel</p>
             </div>
 
             <form method="POST" action="{{ route('admin_2.login.submit') }}">
                 @csrf
 
                 <div class="mb-5">
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                    <label for="email" class="block text-sm font-medium text-gray-600 mb-1">Email Address</label>
                     <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
-                        class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors">
+                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors">
                     @error('email')
                         <span class="text-red-400 text-sm mt-1 block">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="mb-6">
-                    <label for="password" class="block text-sm font-medium text-gray-300 mb-1">Password</label>
+                    <label for="password" class="block text-sm font-medium text-gray-600 mb-1">Password</label>
                     <input id="password" type="password" name="password" required
-                        class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors">
+                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors">
                     @error('password')
                         <span class="text-red-400 text-sm mt-1 block">{{ $message }}</span>
                     @enderror
@@ -57,8 +57,8 @@
 
                 <div class="flex items-center justify-between mb-6">
                     <div class="flex items-center">
-                        <input id="remember" type="checkbox" name="remember" class="w-4 h-4 rounded border-gray-600 bg-gray-700 text-blue-500 focus:ring-blue-500 focus:ring-offset-gray-900 cursor-pointer">
-                        <label for="remember" class="ml-2 block text-sm text-gray-400 cursor-pointer">Remember me</label>
+                        <input id="remember" type="checkbox" name="remember" class="w-4 h-4 rounded border-gray-300 bg-gray-700 text-blue-500 focus:ring-blue-500 focus:ring-offset-gray-900 cursor-pointer">
+                        <label for="remember" class="ml-2 block text-sm text-gray-500 cursor-pointer">Remember me</label>
                     </div>
                 </div>
 

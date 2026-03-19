@@ -5,48 +5,48 @@
 @section('content')
 <div class="mb-6 flex items-center justify-between">
     <div>
-        <h1 class="text-2xl font-bold text-gray-100">Edit Service</h1>
-        <p class="text-gray-400 text-sm mt-1">Update details for {{ $service->title }}.</p>
+        <h1 class="text-2xl font-bold text-gray-800">Edit Service</h1>
+        <p class="text-gray-500 text-sm mt-1">Update details for {{ $service->title }}.</p>
     </div>
-    <a href="{{ route('admin_2.services.index') }}" class="text-gray-400 hover:text-gray-200 font-medium py-2 px-4 border border-gray-700 rounded-lg bg-gray-800 shadow-sm transition-colors flex items-center gap-2">
+    <a href="{{ route('admin_2.services.index') }}" class="text-gray-500 hover:text-gray-700 font-medium py-2 px-4 border border-gray-200 rounded-lg bg-white shadow-sm transition-colors flex items-center gap-2">
         <i class="fas fa-arrow-left"></i> Back to List
     </a>
 </div>
 
-<div class="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6 max-w-3xl">
+<div class="bg-gray-100 rounded-xl shadow-sm border border-gray-200 p-6 max-w-3xl">
     <form action="{{ route('admin_2.services.update', $service) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
         <div class="mb-5">
-            <label for="title" class="block text-sm font-medium text-gray-200 mb-1">Service Title*</label>
+            <label for="title" class="block text-sm font-medium text-gray-700 mb-1">Service Title*</label>
             <input type="text" id="title" name="title" value="{{ old('title', $service->title) }}" required
-                class="w-full px-4 py-2 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition-colors">
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 transition-colors">
             @error('title')
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
             @enderror
         </div>
 
         <div class="mb-5">
-            <label for="image" class="block text-sm font-medium text-gray-200 mb-1">Service Image (Optional)</label>
-            <div class="mt-1 border-2 border-gray-600 border-dashed rounded-lg px-6 pt-5 pb-6 flex justify-center hover:bg-gray-900 transition-colors">
+            <label for="image" class="block text-sm font-medium text-gray-700 mb-1">Service Image (Optional)</label>
+            <div class="mt-1 border-2 border-gray-300 border-dashed rounded-lg px-6 pt-5 pb-6 flex justify-center hover:bg-gray-50 transition-colors">
                 <div class="space-y-1 text-center">
-                    <i class="fas fa-image text-4xl text-gray-400 mb-2"></i>
-                    <div class="flex text-sm text-gray-300 justify-center">
-                        <label for="image" class="relative cursor-pointer bg-gray-800 rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                    <i class="fas fa-image text-4xl text-gray-500 mb-2"></i>
+                    <div class="flex text-sm text-gray-600 justify-center">
+                        <label for="image" class="relative cursor-pointer bg-gray-100 rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
                             <span>Upload an image</span>
                             <input id="image" name="image" type="file" class="sr-only" accept="image/*" onchange="previewImage(event)">
                         </label>
                         <p class="pl-1">or drag and drop</p>
                     </div>
-                    <p class="text-xs text-gray-400">PNG, JPG, SVG up to 2MB</p>
+                    <p class="text-xs text-gray-500">PNG, JPG, SVG up to 2MB</p>
                 </div>
             </div>
             
             <!-- Image Preview -->
             <div id="imagePreviewContainer" class="mt-4 {{ $service->image ? '' : 'hidden' }}">
-                <p class="text-sm font-medium text-gray-200 mb-2">Current Image:</p>
-                <div class="p-2 border border-gray-700 rounded bg-gray-900 inline-block relative group">
+                <p class="text-sm font-medium text-gray-700 mb-2">Current Image:</p>
+                <div class="p-2 border border-gray-200 rounded bg-gray-50 inline-block relative group">
                     <img id="imagePreview" src="{{ $service->image ? asset('storage/' . $service->image) : '#' }}" alt="Preview" class="h-20 w-auto object-contain">
                 </div>
             </div>
@@ -57,9 +57,9 @@
         </div>
 
         <div class="mb-5">
-            <label for="short_description" class="block text-sm font-medium text-gray-200 mb-1">Short Description*</label>
+            <label for="short_description" class="block text-sm font-medium text-gray-700 mb-1">Short Description*</label>
             <textarea id="short_description" name="short_description" rows="2" required
-                class="w-full px-4 py-2 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-white transition-colors">{{ old('short_description', $service->short_description) }}</textarea>
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 transition-colors">{{ old('short_description', $service->short_description) }}</textarea>
             @error('short_description')
                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
             @enderror
@@ -67,13 +67,13 @@
 
         <div class="mb-6">
             <label class="flex items-center cursor-pointer">
-                <input type="checkbox" name="is_active" value="1" class="w-5 h-5 rounded border-gray-600 text-blue-600 focus:ring-blue-500 transition duration-150 ease-in-out cursor-pointer" {{ old('is_active', $service->is_active) ? 'checked' : '' }}>
-                <span class="ml-2 text-gray-200 font-medium cursor-pointer">Active Service</span>
+                <input type="checkbox" name="is_active" value="1" class="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition duration-150 ease-in-out cursor-pointer" {{ old('is_active', $service->is_active) ? 'checked' : '' }}>
+                <span class="ml-2 text-gray-700 font-medium cursor-pointer">Active Service</span>
             </label>
         </div>
 
-        <div class="flex justify-end gap-3 pt-4 border-t border-gray-700">
-            <a href="{{ route('admin_2.services.index') }}" class="px-5 py-2.5 border border-gray-600 rounded-lg text-gray-200 hover:bg-gray-900 font-medium transition-colors">Cancel</a>
+        <div class="flex justify-end gap-3 pt-4 border-t border-gray-200">
+            <a href="{{ route('admin_2.services.index') }}" class="px-5 py-2.5 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 font-medium transition-colors">Cancel</a>
             <button type="submit" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium shadow-sm transition-colors cursor-pointer flex items-center gap-2">
                 <i class="fas fa-save"></i> Update Service
             </button>
