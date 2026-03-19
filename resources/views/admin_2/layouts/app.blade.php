@@ -19,8 +19,11 @@
 </head>
 <body class="bg-gray-50 flex h-screen overflow-hidden text-gray-800">
 
+    <!-- Mobile Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden transition-opacity"></div>
+
     <!-- Sidebar -->
-    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col hidden md:flex">
+    <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col fixed md:relative z-50 h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
         <div class="h-16 flex items-center px-6 border-b border-gray-200">
             <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                 Binex Admin
@@ -73,7 +76,7 @@
         <!-- Header -->
         <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 z-10">
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-500 focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-gray-500 focus:outline-none">
                 <i class="fas fa-bars text-xl"></i>
             </button>
             <div class="hidden md:block"></div> <!-- Spacer -->
@@ -116,5 +119,25 @@
         </div>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('-translate-x-full');
+                mobileOverlay.classList.toggle('hidden');
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+            }
+
+            if (mobileOverlay) {
+                mobileOverlay.addEventListener('click', toggleMenu);
+            }
+        });
+    </script>
 </body>
 </html>

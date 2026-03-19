@@ -63,7 +63,7 @@
                                     <li class="nav-item"><a href="index" class="nav-link">Home</a></li> 
                                     <li class="nav-item"><a href="about-us" class="nav-link">About Us</a></li>
                                     <li class="nav-item dropdown dropdown-with-icon">
-                                        <a href="services" class="nav-link">Services <span class="label border-radius-100px bg-light-medium-gray fw-700 alt-font text-base-color text-uppercase">Hot</span></a>
+                                        <a href="services" class="nav-link">Services</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li>

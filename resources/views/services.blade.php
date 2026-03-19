@@ -63,7 +63,7 @@
                                     <li class="nav-item"><a href="index" class="nav-link">Home</a></li> 
                                     <li class="nav-item"><a href="about-us" class="nav-link">About Us</a></li>
                                     <li class="nav-item dropdown dropdown-with-icon">
-                                        <a href="services" class="nav-link">Services <span class="label border-radius-100px bg-light-medium-gray fw-700 alt-font text-base-color text-uppercase">Hot</span></a>
+                                        <a href="services" class="nav-link">Services</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li>
@@ -173,7 +173,14 @@
 
                         @foreach($services as $service)
                         <div class="col icon-with-text-style-04 transition-inner-all mb-30px">
-                            <div class="feature-box border-radius-10px box-shadow-double-large-hover bg-gradient-top-very-light-gray pt-40px p-50px xl-p-35px last-paragraph-no-margin text-start">
+                            <div class="feature-box h-100 border-radius-10px box-shadow-double-large-hover bg-gradient-top-very-light-gray pt-40px p-50px xl-p-35px last-paragraph-no-margin text-start">
+                                @if($service->image)
+                                <div class="mb-35px">
+                                    <a href="services-details/{{ $service->slug }}">
+                                        <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="border-radius-6px w-100 object-fit-cover" style="height: 200px;">
+                                    </a>
+                                </div>
+                                @endif
                                 <div class="feature-box-icon mb-50px">
                                     <a href="services-details/{{ $service->slug }}"><i class="{{ $service->icon }} icon-extra-large text-base-color"></i></a>
                                 </div>
