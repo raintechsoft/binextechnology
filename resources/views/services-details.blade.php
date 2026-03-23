@@ -25,135 +25,21 @@
     <body data-mobile-nav-style="classic" class="custom-cursor background-position-center-top" style="background-image: url('images/vertical-line-bg.svg')">
         <div class="box-layout">
             <!-- start header --> 
-            <header class="header-with-topbar">
-                <!-- start header top bar -->
-                <div class="header-top-bar top-bar-dark bg-white disable-fixed border-bottom border-color-extra-medium-gray">
-                    <div class="container-fluid">
-                        <div class="row h-50px xs-h-auto align-items-center m-0 xs-pt-5px xs-pb-5px">
-                            <div class="col-lg-6 col-md-7 text-center text-md-start xs-px-0">
-                                <div class="fs-14 text-dark-gray fw-500">&#128075; Subscribe and receive 20% bonus discount.</div>
-                            </div>
-                            <div class="col-lg-6 col-md-5 text-end d-none d-md-flex">
-                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:info@domin.com" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>info@domin.com</a></div>
-                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>Broadway, 24th Floor, San Francisco</div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end header top bar -->
-                <!-- start navigation -->
-                <nav class="navbar navbar-expand-lg header-light bg-transparent disable-fixed">
-                    <div class="container-fluid">
-                        <div class="col-auto col-lg-3 me-lg-0 me-auto">
-                            <a class="navbar-brand" href="index">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="default-logo">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="alt-logo">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="mobile-logo"> 
-                            </a>
-                        </div>
-                        <div class="col-auto ms-auto md-ms-0 menu-order position-static">
-                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav"> 
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="index" class="nav-link">Home</a></li> 
-                                    <li class="nav-item"><a href="about-us" class="nav-link">About Us</a></li>
-                                    <li class="nav-item dropdown dropdown-with-icon">
-                                        <a href="services" class="nav-link">Services <span class="label border-radius-100px bg-light-medium-gray fw-700 alt-font text-base-color text-uppercase">Hot</span></a>
-                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-card-text"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Content writing</span>
-                                                        <p>Telling your story with impact.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-send"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Marketing</span>
-                                                        <p>Strategies for lasting impact.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-briefcase"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Product Development</span>
-                                                        <p>Turning concepts into products.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-box-seam"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>UX / UI Design</span>
-                                                        <p>Crafting experiences users love.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="clients" class="nav-link">Clients</a></li>
-                                    <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-auto text-end d-none d-sm-flex">
-                            <div class="header-icon"> 
-                                <div class="header-search-icon icon">
-                                    <a href="#" class="search-form-icon header-search-form h-45px w-45px d-flex align-items-center justify-content-center border border-color-extra-medium-gray text-center rounded-circle"> 
-                                        <i class="feather icon-feather-search text-base-color"></i> 
-                                    </a>
-                                    <!-- start search input -->
-                                    <div class="search-form-wrapper">
-                                        <button title="Close" type="button" class="search-close">�</button>
-                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
-                                            <div class="search-form-box">
-                                                <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-2px">What are you looking for?</h2>
-                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
-                                                <button type="submit" class="search-button">
-                                                    <i class="feather icon-feather-search" aria-hidden="true"></i> 
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- end search input -->
-                                </div>
-                                <div class="header-button ms-10px d-none d-xl-inline-block">
-                                    <a href="mailto:info@domin.com" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
-                                        <span>
-                                            <span class="btn-double-text" data-text="Get started">Get started</span>
-                                            <span><i class="feather icon-feather-mail"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                </nav>
-                <!-- end navigation -->
-            </header>
+            @include('components.header')
             <!-- end header -->
             <!-- start page title -->
-            <section class="page-title-center-alignment top-space-margin position-relative cover-background border-radius-10px lg-no-border-radius p-0 overflow-visible" style="background-image: url(images/demo-modern-business-about-title-bg.jpg)">
+            <section class="page-title-center-alignment top-space-margin position-relative cover-background border-radius-10px lg-no-border-radius p-0 overflow-visible" style="background-image: url(images/binolex/bgpage.jpg)">
                 <div class="container position-relative">
                     <div class="absolute-middle-left left-150px md-left-0px d-none d-md-block">
-                        <img src="https://placehold.co/81x90" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
+                        <img src="images/binolex/arc.png" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
                     </div>
                     <div class="absolute-bottom-right right-150px md-right-0px bottom-minus-50px d-none d-md-block">
-                        <img src="https://placehold.co/116x114" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
+                        <img src="images/binolex/shape.png" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
                     </div>
                     <div class="row align-items-center justify-content-center position-relative z-index-1 h-350px sm-h-250px">
                         <div class="col-md-6 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <h1 class="alt-font d-inline-block fw-700 ls-0px text-dark-gray mb-15px">Marketing</h1>
-                            <p class="mx-auto w-50 xl-w-70 md-w-100 mb-0">We deliver smart solutions that help your business grow successfully.</p>
+                            <h1 class="alt-font d-inline-block fw-700 ls-0px text-dark-gray mb-15px">IT Support Services</h1>
+                            <p class="mx-auto w-50 xl-w-70 md-w-100 mb-0">We deliver smart, highly secured, and robust IT solutions to empower your business operations.</p>
                         </div>
                         <div class="down-section text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <a href="#down-section" class="section-link">
@@ -174,56 +60,57 @@
                             <div class="position-sticky top-80px lg-top-40px">
                                 <div class="mb-30px">
                                     <ul class="p-0 m-0 list-style-02 fs-18 fw-600">
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Content writing</a><i class="bi bi-card-text fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-base-color text-base-color-hover">Marketing</a><i class="bi bi-send fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Product Development</a><i class="bi bi-briefcase fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px"><a href="services-details" class="text-dark-gray text-base-color-hover">UX / UI Design</a><i class="bi bi-box-seam fs-22 ms-auto text-dark-gray"></i></li>
+                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-base-color text-base-color-hover">IT Support Services</a><i class="bi bi-headset fs-22 ms-auto text-dark-gray"></i></li>
+                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Cloud Infrastructure</a><i class="bi bi-cloud fs-22 ms-auto text-dark-gray"></i></li>
+                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Cybersecurity</a><i class="bi bi-shield-check fs-22 ms-auto text-dark-gray"></i></li>
+                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Network Management</a><i class="bi bi-hdd-network fs-22 ms-auto text-dark-gray"></i></li>
+                                        <li class="pb-15px"><a href="services-details" class="text-dark-gray text-base-color-hover">Disaster Recovery</a><i class="bi bi-database-check fs-22 ms-auto text-dark-gray"></i></li>
                                     </ul>
                                 </div>
                                 <div class="ps-14 pe-14 xl-ps-10 xl-pe-10 pt-10 pb-10 lg-p-25px bg-dark-gray border-radius-6px text-center text-lg-start">
                                     <span class="fs-20 fw-500 text-white mb-10px d-inline-block">Have questions?</span>
-                                    <p class="text-white opacity-5">We unleash your business potential by maximize the business innovation.</p>
-                                    <a href="mailto:help@crafto.com" class="btn btn-large btn-white btn-switch-text btn-box-shadow w-100 border-0 btn-rounded text-transform-none left-icon me-10px sm-mb-15px sm-mt-15px">
+                                    <p class="text-white opacity-5">We unleash your business potential by maximizing innovation and security.</p>
+                                    <a href="mailto:info@binex.ie" class="btn btn-large btn-white btn-switch-text btn-box-shadow w-100 border-0 btn-rounded text-transform-none left-icon me-10px sm-mb-15px sm-mt-15px">
                                         <span> 
                                             <span><i class="feather icon-feather-mail"></i></span>
-                                            <span class="btn-double-text" data-text="help@crafto.com">help@crafto.com</span> 
+                                            <span class="btn-double-text" data-text="info@binex.ie">info@binex.ie</span> 
                                         </span>
                                     </a> 
-                                    <div class="d-inline-block text-white mt-15px text-center w-100"><i class="bi bi-telephone-outbound me-10px align-middle"></i><a href="tel:+11234567890">+1 123 456 7890</a></div>
+                                    <div class="d-inline-block text-white mt-15px text-center w-100"><i class="bi bi-telephone-outbound me-10px align-middle"></i><a href="contact">+353 123 4567</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-8 order-1 order-lg-2 md-mb-50px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                            <h4 class="fw-700 text-dark-gray mb-20px alt-font">Successful marketing campaign</h4>
-                            <p>Creating an entire campaign is a big task, but the process is pretty straightforward. Planning your campaign is just as important as <span class="text-dark-gray text-decoration-line-bottom fw-500">designing the fun stuff,</span> such as the creative advertisements and conversion assets, so take the time to do this important step.</p>
+                            <h4 class="fw-700 text-dark-gray mb-20px alt-font">Comprehensive IT Support & Management</h4>
+                            <p>Managing an entire enterprise infrastructure is a complex task, but our proven process makes it straightforward. Securing your network is just as important as <span class="text-dark-gray text-decoration-line-bottom fw-500">designing scalable systems,</span> such as robust servers and rapid cloud deployments, so take the time to rely on our integrated approach.</p>
                             <div class="bg-very-light-gray p-6 mt-6 mb-9 border-radius-6px">
                                 <div class="row align-items-center">
                                     <div class="col-md-6 pe-5 lg-pe-15px md-mb-20px">
-                                        <span class="fs-18 fw-600 text-dark-gray mb-20px d-block">Types of marketing campaigns</span>
+                                        <span class="fs-18 fw-600 text-dark-gray mb-20px d-block">Core IT Strategies</span>
                                         <ul class="p-0 m-0 list-style-02 text-dark-gray">
-                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>Product marketing campaign</li>
-                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>Brand development campaign</li>
-                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>Email marketing campaign</li>
-                                            <li class="pb-10px"><i class="fa-solid fa-check fs-15 me-10px"></i>Content marketing campaign</li>
+                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>24/7 Managed IT Services</li>
+                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>On-Site and Remote Assistance</li>
+                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>Hardware Procurement & Setup</li>
+                                            <li class="pb-10px"><i class="fa-solid fa-check fs-15 me-10px"></i>Disaster Recovery & Daily Backups</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <img src="https://placehold.co/318x255" alt=""/>
+                                        <img src="images/binolex/sv_support.png" alt="IT Support"/>
                                     </div>
                                 </div>
                             </div>
-                            <h4 class="fw-700 text-dark-gray mb-20px alt-font">Strategies for marketing campaign</h4>
-                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Analyze your client's audiences</span> - Understand your client's audience to create more targeted, effective strategies. Gain insights into audience behavior to drive smarter marketing decisions.</p>
+                            <h4 class="fw-700 text-dark-gray mb-20px alt-font">Strategies for Sustainable Growth</h4>
+                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Cloud Integrations</span> - Unlock true scalability and enable hybrid work environments with structured Microsoft 365 and Azure migrations tailored to your exact workflows.</p>
                             <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray mb-25px mt-25px"></div>
-                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Coordinate with other agencies</span> - Seamlessly coordinate with partner agencies to ensure unified execution. Collaborating across agencies for smoother, smarter project delivery.</p>
+                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Cybersecurity Implementation</span> - Protect highly sensitive company and client data with multi-layer firewall monitoring, endpoint detection, and proactive threat intelligence.</p>
                             <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray mb-25px mt-25px"></div>
-                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Pull social data for case studies</span> - Translate audience behavior into powerful storytelling for case studies. Let the data do the talking � showcase results through social insights.</p>
+                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Continuous Maintenance</span> - Avoid costly downtimes with proactive asset management and routine patching mapped across your entire organization architecture.</p>
                             <div class="bg-base-color p-35px border-radius-6px mt-9">
                                 <div class="row align-items-center justify-content-center justify-content-lg-start">
-                                    <div class="col-5 col-sm-3 sm-mb-20px text-center"><img src="https://placehold.co/193x153" alt=""/></div>
+                                    <div class="col-5 col-sm-3 sm-mb-20px text-center"><img src="images/binolex/sv_software.png" alt="Software Support"/></div>
                                     <div class="col-md-9 text-center text-md-start ps-3">
-                                        <div class="fs-18 lh-26 mb-15px w-90 sm-w-100 mx-auto mx-md-0 text-white">Even when you are marketing to your entire audience or customer base, you are still�simply speaking�to a single human at any given time.</div>
-                                        <span class="text-white fs-18"><span class="fw-600">Jacob vaynerchuk,</span> marketing analyst</span>
+                                        <div class="fs-18 lh-26 mb-15px w-90 sm-w-100 mx-auto mx-md-0 text-white">Trusting Binex to handle our IT operations allowed us to finally focus 100% on scaling our business fearlessly.</div>
+                                        <span class="text-white fs-18"><span class="fw-600">Sarah Connor,</span> CTO</span>
                                     </div>
                                 </div>
                             </div>
@@ -244,10 +131,10 @@
                                             <div class="select">
                                                 <select class="form-control" name="select">
                                                     <option value="">Select services</option>
-                                                    <option value="Engaging audiences">Engaging audiences</option>
-                                                    <option value="Marketing research">Marketing research</option>
-                                                    <option value="Sales development">Sales development</option>
-                                                    <option value="Marketing campaigns">Marketing campaigns</option>
+                                                    <option value="IT Support">IT Support</option>
+                                                    <option value="Cybersecurity">Cybersecurity</option>
+                                                    <option value="Cloud Migration">Cloud Migration</option>
+                                                    <option value="General Inquiry">General Inquiry</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -274,53 +161,7 @@
             <!-- end section -->
         </div>
         <!-- srat footer -->
-        <footer class="cover-background pb-0 overflow-visible" style="background-image: url('images/demo-modern-business-footer-bg.jpg')">
-            <img src="images/demo-modern-business-elements-04.png" alt="" class="position-absolute right-150px md-right-50px top-minus-60px animation-rotation d-none d-sm-block">
-            <div class="container overflow-hidden">
-                <div class="row position-relative z-index-9">
-                    <div class="col-12 col-xl-3 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-1">
-                        <a href="index" class="footer-logo mb-25px xs-mb-20px d-inline-block">
-                            <img src="images/demo-modern-business-logo-white.png" data-at2x="images/demo-modern-business-logo-white@2x.png" alt="">
-                        </a>
-                        <div class="elements-social social-text-style-01 mt-auto">
-                            <ul class="small-icon light">
-                                <li><a class="facebook" href="https://www.facebook.com/" target="_blank">Fb.</a></li>
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank">Ig.</a></li> 
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank">Tw.</a></li> 
-                                <li><a class="behance" href="http://www.behance.com/" target="_blank">Be.</a></li> 
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-2 order-3 sm-mb-20px">
-                        <p class="w-80 mb-20px md-w-100"><span class="text-white d-block">Crafto - Netherlands</span>Graaf florisstraat 22A, Netherlands - 1001</p>
-                        <p class="w-80 md-w-100"><span class="text-white d-block">Crafto - Barcelona</span>365 Grand via de coarts, Barcelona - 1002</p>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-3 order-4 sm-mb-30px">
-                        <p class="mb-0">Interested in working with us? </p>
-                        <a href="mailto:hello@yourdomain.com" class="text-white text-decoration-line-bottom mb-25px d-inline-block">hello@yourdomain.com</a>
-                        <p class="mb-0">Looking for a job opportunity?</p>
-                        <a href="mailto:hr@yourdomain.com" class="text-white text-decoration-line-bottom d-inline-block">hr@yourdomain.com</a>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 d-flex flex-column order-xl-4 order-2 lg-mb-30px sm-mb-20px">
-                        <span class="d-block text-white mb-15px">Sign up for the newsletter</span> 
-                        <div class="d-inline-block w-100 newsletter-style-02 position-relative mb-10px">
-                            <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative w-100">
-                                <input class="bg-transparent border-color-transparent-white-light w-100 form-control required" type="email" name="email" placeholder="Enter your email...">
-                                <input type="hidden" name="redirect" value="">
-                                <button type="submit" class="btn submit" aria-label="submit"><i class="icon bi bi-envelope icon-small text-white"></i></button>
-                                <div class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>
-                            </form>
-                        </div>
-                        <p class="mt-auto mb-0">� 2025 Crafto. Powered by <a href="https://www.themezaa.com/" target="_blank" class="fw-500 text-decoration-line-bottom text-medium-gray text-white-hover">ThemeZaa</a></p>
-                    </div>
-                </div>
-                <div class="row mb-minus-70px md-mb-minus-50px md-mb-minus-20px">
-                    <div class="col-12 text-center">
-                        <span class="text-base-color fs-300 xl-fs-250 lg-fs-200 sm-fs-150 xs-fs-100 fw-600 ls-minus-8px lg-ls-minus-4px w-100 opacity-6">scaleup</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('components.footer')
         <!-- end footer -->
         <!-- start crafto progressive blur -->
         <div class="crafto-progressive-blur crafto-progressive-blur-bottom" blur-bottom="yes" style="--progressive-blur-height:15vh"></div>
@@ -331,4 +172,3 @@
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
-

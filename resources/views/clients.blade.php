@@ -25,135 +25,21 @@
     <body data-mobile-nav-style="classic" class="custom-cursor background-position-center-top" style="background-image: url('images/vertical-line-bg.svg')">
         <div class="box-layout"> 
             <!-- start header --> 
-            <header class="header-with-topbar">
-                <!-- start header top bar -->
-                <div class="header-top-bar top-bar-dark bg-white disable-fixed border-bottom border-color-extra-medium-gray">
-                    <div class="container-fluid">
-                        <div class="row h-50px xs-h-auto align-items-center m-0 xs-pt-5px xs-pb-5px">
-                            <div class="col-lg-6 col-md-7 text-center text-md-start xs-px-0">
-                                <div class="fs-14 text-dark-gray fw-500">&#128075; Subscribe and receive 20% bonus discount.</div>
-                            </div>
-                            <div class="col-lg-6 col-md-5 text-end d-none d-md-flex">
-                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:info@domin.com" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>info@domin.com</a></div>
-                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>Broadway, 24th Floor, San Francisco</div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end header top bar -->
-                <!-- start navigation -->
-                <nav class="navbar navbar-expand-lg header-light bg-transparent disable-fixed">
-                    <div class="container-fluid">
-                        <div class="col-auto col-lg-3 me-lg-0 me-auto">
-                            <a class="navbar-brand" href="index">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="default-logo">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="alt-logo">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="mobile-logo"> 
-                            </a>
-                        </div>
-                        <div class="col-auto ms-auto md-ms-0 menu-order position-static">
-                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav"> 
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="index" class="nav-link">Home</a></li> 
-                                    <li class="nav-item"><a href="about-us" class="nav-link">About Us</a></li>
-                                    <li class="nav-item dropdown dropdown-with-icon">
-                                        <a href="services" class="nav-link">Services <span class="label border-radius-100px bg-light-medium-gray fw-700 alt-font text-base-color text-uppercase">Hot</span></a>
-                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-card-text"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Content writing</span>
-                                                        <p>Telling your story with impact.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-send"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Marketing</span>
-                                                        <p>Strategies for lasting impact.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-briefcase"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Product Development</span>
-                                                        <p>Turning concepts into products.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-box-seam"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>UX / UI Design</span>
-                                                        <p>Crafting experiences users love.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="clients" class="nav-link">Clients</a></li>
-                                    <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-auto text-end d-none d-sm-flex">
-                            <div class="header-icon"> 
-                                <div class="header-search-icon icon">
-                                    <a href="#" class="search-form-icon header-search-form h-45px w-45px d-flex align-items-center justify-content-center border border-color-extra-medium-gray text-center rounded-circle"> 
-                                        <i class="feather icon-feather-search text-base-color"></i> 
-                                    </a>
-                                    <!-- start search input -->
-                                    <div class="search-form-wrapper">
-                                        <button title="Close" type="button" class="search-close">�</button>
-                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
-                                            <div class="search-form-box">
-                                                <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-2px">What are you looking for?</h2>
-                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
-                                                <button type="submit" class="search-button">
-                                                    <i class="feather icon-feather-search" aria-hidden="true"></i> 
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- end search input -->
-                                </div>
-                                <div class="header-button ms-10px d-none d-xl-inline-block">
-                                    <a href="mailto:info@domin.com" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
-                                        <span>
-                                            <span class="btn-double-text" data-text="Get started">Get started</span>
-                                            <span><i class="feather icon-feather-mail"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                </nav>
-                <!-- end navigation -->
-            </header> 
+            @include('components.header') 
             <!-- end header --> 
             <!-- start page title -->
-            <section class="page-title-center-alignment top-space-margin position-relative cover-background border-radius-10px lg-no-border-radius p-0 overflow-visible" style="background-image: url(images/demo-modern-business-about-title-bg.jpg)">
+            <section class="page-title-center-alignment top-space-margin position-relative cover-background border-radius-10px lg-no-border-radius p-0 overflow-visible" style="background-image: url(images/binolex/bgpage.jpg)">
                 <div class="container position-relative">
                     <div class="absolute-middle-left left-150px md-left-0px d-none d-md-block">
-                        <img src="https://placehold.co/81x90" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
+                        <img src="images/binolex/arc.png" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
                     </div>
                     <div class="absolute-bottom-right right-150px md-right-0px bottom-minus-50px d-none d-md-block">
-                        <img src="https://placehold.co/116x114" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
+                        <img src="images/binolex/shape.png" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
                     </div>
                     <div class="row align-items-center justify-content-center position-relative z-index-1 h-350px sm-h-250px">
                         <div class="col-md-6 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <h1 class="alt-font d-inline-block fw-700 ls-0px text-dark-gray mb-15px">Clients</h1>
-                            <p class="mx-auto w-50 xl-w-70 md-w-100 mb-0">Delivering tailored solutions to clients from startups to global enterprises.</p>
+                            <p class="mx-auto w-50 xl-w-70 md-w-100 mb-0">Delivering tailored IT solutions to clients from local startups to global enterprises.</p>
                         </div>
                         <div class="down-section text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <a href="#down-section" class="section-link">
@@ -166,176 +52,63 @@
                 </div>
             </section>
             <!-- end page title -->
+            
             <!-- start section -->
-            <section id="down-section">
+            <section id="down-section" class="position-relative">
                 <div class="container" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-4 row-cols-sm-2 clients-style-04 bg-white box-shadow-double-large border-radius-10px z-index-9 position-relative">
-                        <!-- start client loop -->
-                            @foreach($clients as $client)
-                            <div class="col text-center swiper-slide">
-                                <a href="{{ $client->url ?? '#' }}"><img src="{{ asset('storage/' . $client->logo) }}" class="h-40px sm-h-35px" alt="{{ $client->name }}"></a>
+                    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 gap-y-4 justify-content-center">
+                        <!-- start client static items -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
+                                <a href="#">
+                                    <img src="images/logo-monday-dark-blue-01.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                </a>
                             </div>
-                            @endforeach
-                            <!-- end client loop -->
-                    </div>
-                    
+                        </div>
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
+                                <a href="#">
+                                    <img src="images/logo-loitech-dark-blue.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
+                                <a href="#">
+                                    <img src="images/logo-invision-dark-blue.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
+                                <a href="#">
+                                    <img src="images/logo-monday-dark-gray-02.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
+                                <a href="#">
+                                    <img src="images/logo-dropbox-dark-gray-02.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
+                                <a href="#">
+                                    <img src="images/logo-slack-dark-gray-02.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end client static items -->
                     </div>
                 </div>
             </section>
-            <!-- start section -->
-            <!-- start section -->
-            <section class="pt-0 position-relative">
-                <img src="images/demo-modern-business-elements-07.png" alt="" class="position-absolute left-0px top-20px d-none d-lg-block" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <div class="container background-no-repeat background-position-top" style="background-image: url('https://placehold.co/1126x630')">
-                    <div class="row justify-content-center mb-2" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="col-xxl-8 col-xl-8 col-lg-12 text-center">
-                            <h2 class="text-dark-gray fw-700 ls-minus-1px alt-font w-95 mx-auto">Trusted by the world's fastest growing companies</h2>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center mb-5 sm-mb-8" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="col-12 position-relative ps-8 pe-8 lg-ps-15px lg-pe-15px">
-                            <div class="swiper magic-cursor testimonials-style-06" data-slider-options='{ "loop": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "navigation": { "nextEl": ".swiper-button-next-nav", "prevEl": ".swiper-button-previous-nav", "effect": "fade" } }'>
-                                <div class="swiper-wrapper">
-                                    <!-- start testimonial item -->
-                                    <div class="swiper-slide">
-                                        <div class="row align-items-center justify-content-center">
-                                            <div class="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
-                                                <img alt="" src="https://placehold.co/270x245">
-                                            </div>
-                                            <div class="col-lg-5 col-md-7 last-paragraph-no-margin text-center text-md-start">
-                                                <a href="#" class="mb-15px d-block"><img src="images/logo-monday-dark-blue-01.svg" class="h-35px" alt=""></a>
-                                                <span class="mb-5px d-table fs-18 lh-28 fw-500 text-dark-gray">Their team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for all your hard work. Trust us we looked for a very long time.</span>
-                                                <span class="text-uppercase fw-700 alt-font text-dark-gray">Herman miller, Monday</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end testimonial item -->
-                                    <!-- start testimonial item -->
-                                    <div class="swiper-slide">
-                                        <div class="row align-items-center justify-content-center">
-                                            <div class="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
-                                                <img alt="" src="https://placehold.co/270x245">
-                                            </div>
-                                            <div class="col-lg-5 col-md-7 last-paragraph-no-margin text-center text-md-start">
-                                                <a href="#" class="mb-15px d-block"><img src="images/logo-loitech-dark-blue.svg" class="h-35px" alt=""></a>
-                                                <span class="mb-5px d-table fs-18 lh-28 fw-500 text-dark-gray">Their team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for all your hard work. Trust us we looked for a very long time.</span>
-                                                <span class="text-uppercase fw-700 alt-font text-dark-gray">Leonel mooney, Logitech</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end testimonial item -->
-                                    <!-- start testimonial item -->
-                                    <div class="swiper-slide">
-                                        <div class="row align-items-center justify-content-center">
-                                            <div class="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
-                                                <img alt="" src="https://placehold.co/270x245">
-                                            </div>
-                                            <div class="col-lg-5 col-md-7 last-paragraph-no-margin text-center text-md-start">
-                                                <a href="#" class="mb-15px d-block"><img src="images/logo-invision-dark-blue.svg" class="h-35px" alt=""></a>
-                                                <span class="mb-5px d-table fs-18 lh-28 fw-500 text-dark-gray">Their team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for all your hard work. Trust us we looked for a very long time.</span>
-                                                <span class="text-uppercase fw-700 alt-font text-dark-gray">Matthew taylor, invision</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end testimonial item -->
-                                </div>
-                                <!-- start slider navigation -->
-                                <div class="swiper-button-previous-nav swiper-button-prev md-left-0px"><i class="feather icon-feather-arrow-left icon-extra-medium text-dark-gray"></i></div>
-                                <div class="swiper-button-next-nav swiper-button-next md-right-0px"><i class="feather icon-feather-arrow-right icon-extra-medium text-dark-gray"></i></div>
-                                <!-- end slider pagination -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="col sm-mb-30px">
-                            <div class="bg-white h-100 border-radius-6px text-center box-shadow-quadruple-large box-shadow-quadruple-large-hover">
-                                <div class="pt-10 pb-10">
-                                    <img src="images/logo-monday-dark-gray-02.svg" class="h-40px md-h-35px sm-h-40px" alt="" />
-                                </div>
-                                <div class="border-top fs-16 p-15px last-paragraph-no-margin">
-                                    <p>Project management - <span class="fw-600 text-dark-gray">275% Growth</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col sm-mb-30px">
-                            <div class="bg-white h-100 border-radius-6px text-center box-shadow-quadruple-large box-shadow-quadruple-large-hover">
-                                <div class="pt-10 pb-10">
-                                    <img src="images/logo-dropbox-dark-gray-02.svg" class="h-40px md-h-35px sm-h-40px" alt="" />
-                                </div>
-                                <div class="border-top fs-16 border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                    <p>Team management - <span class="fw-600 text-dark-gray">195% Growth</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-white h-100 border-radius-6px text-center box-shadow-quadruple-large box-shadow-quadruple-large-hover">
-                                <div class="pt-10 pb-10">
-                                    <img src="images/logo-slack-dark-gray-02.svg" class="h-40px md-h-35px sm-h-40px" alt="" />
-                                </div>
-                                <div class="border-top fs-16 border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                    <p>Secure storage - <span class="fw-600 text-dark-gray">235% Growth</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-5" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="col-12 text-center">
-                            <i class="bi bi-envelope text-dark-gray d-inline-block align-middle icon-extra-medium me-5px"></i>
-                            <div class="fs-20 alt-font text-dark-gray d-inline-block align-middle fw-500 ls-minus-05px">Turn your business into a success story with our expert solution. <a href="contact" class="text-dark-gray text-decoration-line-bottom fw-600">Contact us now</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- end section -->
+            
+           
         </div>
-        <!-- srat footer -->
-        <footer class="cover-background pb-0 overflow-visible" style="background-image: url('images/demo-modern-business-footer-bg.jpg')">
-            <img src="images/demo-modern-business-elements-04.png" alt="" class="position-absolute right-150px md-right-50px top-minus-60px animation-rotation d-none d-sm-block">
-            <div class="container overflow-hidden">
-                <div class="row position-relative z-index-9">
-                    <div class="col-12 col-xl-3 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-1">
-                        <a href="index" class="footer-logo mb-25px xs-mb-20px d-inline-block">
-                            <img src="images/demo-modern-business-logo-white.png" data-at2x="images/demo-modern-business-logo-white@2x.png" alt="">
-                        </a>
-                        <div class="elements-social social-text-style-01 mt-auto">
-                            <ul class="small-icon light">
-                                <li><a class="facebook" href="https://www.facebook.com/" target="_blank">Fb.</a></li>
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank">Ig.</a></li> 
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank">Tw.</a></li> 
-                                <li><a class="behance" href="http://www.behance.com/" target="_blank">Be.</a></li> 
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-2 order-3 sm-mb-20px">
-                        <p class="w-80 mb-20px md-w-100"><span class="text-white d-block">Crafto - Netherlands</span>Graaf florisstraat 22A, Netherlands - 1001</p>
-                        <p class="w-80 md-w-100"><span class="text-white d-block">Crafto - Barcelona</span>365 Grand via de coarts, Barcelona - 1002</p>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-3 order-4 sm-mb-30px">
-                        <p class="mb-0">Interested in working with us? </p>
-                        <a href="mailto:hello@yourdomain.com" class="text-white text-decoration-line-bottom mb-25px d-inline-block">hello@yourdomain.com</a>
-                        <p class="mb-0">Looking for a job opportunity?</p>
-                        <a href="mailto:hr@yourdomain.com" class="text-white text-decoration-line-bottom d-inline-block">hr@yourdomain.com</a>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 d-flex flex-column order-xl-4 order-2 lg-mb-30px sm-mb-20px">
-                        <span class="d-block text-white mb-15px">Sign up for the newsletter</span> 
-                        <div class="d-inline-block w-100 newsletter-style-02 position-relative mb-10px">
-                            <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative w-100">
-                                <input class="bg-transparent border-color-transparent-white-light w-100 form-control required" type="email" name="email" placeholder="Enter your email...">
-                                <input type="hidden" name="redirect" value="">
-                                <button type="submit" class="btn submit" aria-label="submit"><i class="icon bi bi-envelope icon-small text-white"></i></button>
-                                <div class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>
-                            </form>
-                        </div>
-                        <p class="mt-auto mb-0">� 2025 Crafto. Powered by <a href="https://www.themezaa.com/" target="_blank" class="fw-500 text-decoration-line-bottom text-medium-gray text-white-hover">ThemeZaa</a></p>
-                    </div>
-                </div>
-                <div class="row mb-minus-70px md-mb-minus-50px md-mb-minus-20px">
-                    <div class="col-12 text-center">
-                        <span class="text-base-color fs-300 xl-fs-250 lg-fs-200 sm-fs-150 xs-fs-100 fw-600 ls-minus-8px lg-ls-minus-4px w-100 opacity-6">scaleup</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <!-- start footer -->
+        @include('components.footer')
         <!-- end footer -->
         <!-- start crafto progressive blur -->
         <div class="crafto-progressive-blur crafto-progressive-blur-bottom" blur-bottom="yes" style="--progressive-blur-height:15vh"></div>
@@ -346,4 +119,3 @@
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
-

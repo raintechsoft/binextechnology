@@ -25,130 +25,16 @@
     <body data-mobile-nav-style="classic" class="custom-cursor background-position-center-top" style="background-image: url('images/vertical-line-bg.svg')">
         <div class="box-layout">
             <!-- start header --> 
-            <header class="header-with-topbar">
-                <!-- start header top bar -->
-                <div class="header-top-bar top-bar-dark bg-white disable-fixed border-bottom border-color-extra-medium-gray">
-                    <div class="container-fluid">
-                        <div class="row h-50px xs-h-auto align-items-center m-0 xs-pt-5px xs-pb-5px">
-                            <div class="col-lg-6 col-md-7 text-center text-md-start xs-px-0">
-                                <div class="fs-14 text-dark-gray fw-500">&#128075; Subscribe and receive 20% bonus discount.</div>
-                            </div>
-                            <div class="col-lg-6 col-md-5 text-end d-none d-md-flex">
-                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:info@domin.com" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>info@domin.com</a></div>
-                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>Broadway, 24th Floor, San Francisco</div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end header top bar -->
-                <!-- start navigation -->
-                <nav class="navbar navbar-expand-lg header-light bg-transparent disable-fixed">
-                    <div class="container-fluid">
-                        <div class="col-auto col-lg-3 me-lg-0 me-auto">
-                            <a class="navbar-brand" href="index">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="default-logo">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="alt-logo">
-                                <img src="images/logo.png" data-at2x="images/logo.png" alt="" class="mobile-logo"> 
-                            </a>
-                        </div>
-                        <div class="col-auto ms-auto md-ms-0 menu-order position-static">
-                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav"> 
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="index" class="nav-link">Home</a></li> 
-                                    <li class="nav-item"><a href="about-us" class="nav-link">About Us</a></li>
-                                    <li class="nav-item dropdown dropdown-with-icon">
-                                        <a href="services" class="nav-link">Services <span class="label border-radius-100px bg-light-medium-gray fw-700 alt-font text-base-color text-uppercase">Hot</span></a>
-                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-card-text"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Content writing</span>
-                                                        <p>Telling your story with impact.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-send"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Marketing</span>
-                                                        <p>Strategies for lasting impact.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-briefcase"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Product Development</span>
-                                                        <p>Turning concepts into products.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-box-seam"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>UX / UI Design</span>
-                                                        <p>Crafting experiences users love.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a href="clients" class="nav-link">Clients</a></li>
-                                    <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-auto text-end d-none d-sm-flex">
-                            <div class="header-icon"> 
-                                <div class="header-search-icon icon">
-                                    <a href="#" class="search-form-icon header-search-form h-45px w-45px d-flex align-items-center justify-content-center border border-color-extra-medium-gray text-center rounded-circle"> 
-                                        <i class="feather icon-feather-search text-base-color"></i> 
-                                    </a>
-                                    <!-- start search input -->
-                                    <div class="search-form-wrapper">
-                                        <button title="Close" type="button" class="search-close">�</button>
-                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
-                                            <div class="search-form-box">
-                                                <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-2px">What are you looking for?</h2>
-                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
-                                                <button type="submit" class="search-button">
-                                                    <i class="feather icon-feather-search" aria-hidden="true"></i> 
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- end search input -->
-                                </div>
-                                <div class="header-button ms-10px d-none d-xl-inline-block">
-                                    <a href="mailto:info@domin.com" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
-                                        <span>
-                                            <span class="btn-double-text" data-text="Get started">Get started</span>
-                                            <span><i class="feather icon-feather-mail"></i></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                </nav>
-                <!-- end navigation -->
-            </header>
+            @include('components.header')
             <!-- end header --> 
             <!-- start page title -->
-            <section class="page-title-center-alignment top-space-margin position-relative cover-background border-radius-10px lg-no-border-radius p-0 overflow-visible" style="background-image: url(images/demo-modern-business-about-title-bg.jpg)">
+            <section class="page-title-center-alignment top-space-margin position-relative cover-background border-radius-10px lg-no-border-radius p-0 overflow-visible" style="background-image: url(images/binolex/bgpage.jpg)">
                 <div class="container position-relative">
                     <div class="absolute-middle-left left-150px md-left-0px d-none d-md-block">
-                        <img src="https://placehold.co/81x90" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
+                        <img src="images/binolex/arc.png" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
                     </div>
                     <div class="absolute-bottom-right right-150px md-right-0px bottom-minus-50px d-none d-md-block">
-                        <img src="https://placehold.co/116x114" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
+                        <img src="images/binolex/shape.png" data-bottom-top="transform:translateY(50px)" data-top-bottom="transform: translateY(-50px)" alt="">
                     </div>
                     <div class="row align-items-center justify-content-center position-relative z-index-1 h-350px sm-h-250px">
                         <div class="col-md-6 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -171,20 +57,106 @@
                 <div class="container">
                     <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
-                        @foreach($services as $service)
-                        <div class="col icon-with-text-style-04 transition-inner-all mb-30px">
-                            <div class="feature-box border-radius-10px box-shadow-double-large-hover bg-gradient-top-very-light-gray pt-40px p-50px xl-p-35px last-paragraph-no-margin text-start">
-                                <div class="feature-box-icon mb-50px">
-                                    <a href="services-details/{{ $service->slug }}"><i class="{{ $service->icon }} icon-extra-large text-base-color"></i></a>
+                        <!-- Card 1 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_hardware.png" alt="Hardware Support" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Hardware Support & Maintenance</a>
+                                    <p>Reliable support and maintenance to keep your hardware running optimally.</p>
                                 </div>
-                                <div class="feature-box-content">
-                                    <a href="services-details/{{ $service->slug }}" class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px">{{ $service->title }}</a>
-                                    <p>{{ $service->short_description }}</p>
-                                </div>
-                                <div class="feature-box-overlay bg-white border-radius-10px"></div>
                             </div>
                         </div>
-                        @endforeach
+                        <!-- Card 2 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_software.png" alt="Software Support" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Software Support</a>
+                                    <p>Expert assistance to resolve your software issues and improve efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_m365.png" alt="Microsoft 365" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Professional Microsoft 365 Services</a>
+                                    <p>Seamless integration and management for your Microsoft 365 environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_cloud.png" alt="Cloud Services" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Cloud Infrastructure Services</a>
+                                    <p>Scalable and secure cloud solutions tailored to your business needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_network.png" alt="Network Management" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Network Management Services</a>
+                                    <p>Comprehensive monitoring and management for robust network performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_security.png" alt="Cybersecurity" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Cybersecurity Services</a>
+                                    <p>Advanced protection to secure your sensitive data and IT assets.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_support.png" alt="IT Support" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Empower your IT Support/Project & Helpdesk</a>
+                                    <p>Responsive helpdesk support and efficient IT project implementation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_backup.png" alt="Backup Recovery" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Backup and Disaster Recovery</a>
+                                    <p>Ensure business continuity with reliable backup and recovery plans.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 9 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_hosting.png" alt="Web Hosting" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Domain, Web & Email Hosting</a>
+                                    <p>Reliable hosting solutions and support for your online presence.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 10 -->
+                        <div class="col transition-inner-all mb-30px">
+                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
+                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_consulting.png" alt="IT Consulting" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
+                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">IT Consulting and Project Services</a>
+                                    <p>Strategic consulting to align your IT with business objectives.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -197,9 +169,8 @@
                             <span class="ps-20px pe-20px pt-5px pb-5px mb-20px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i class="bi bi-headphones fs-16 me-5px"></i>Customer support</span>
                             <h2 class="alt-font text-dark-gray fw-700 mb-15px">Got questions?</h2>
                             <p class="mb-0">If you have any other questions?</p>
-                            <p>Please get in touch at <a href="mailto:info@support.com" class="text-dark-gray border-bottom border-color-dark-gray fw-500">info@support.com</a></p>
+                            <p>Please get in touch at <a href="mailto:info@binex.ie" class="text-dark-gray border-bottom border-color-dark-gray fw-500">info@binex.ie</a></p>
                             <div class="border-top border-color-extra-medium-gray mt-30px pt-10px w-100 sm-mt-5px d-flex align-items-center">
-                                <img src="https://placehold.co/156x113" alt="">
                                 <span class="fs-18 position-relative text-start">Support executive <span class="fw-600 text-dark-gray d-block">1000+ satisfied.</span></span>
                             </div>
                         </div>
@@ -210,13 +181,13 @@
                                     <div class="accordion-header border-bottom border-color-extra-medium-gray">
                                         <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-01" aria-expanded="true" data-bs-parent="#accordion-style-02">
                                             <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                                <i class="feather icon-feather-minus"></i><span class="fs-18 fw-500">What are some examples of AI technologies?</span>
+                                                <i class="feather icon-feather-minus"></i><span class="fs-18 fw-500">What IT services do you offer?</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div id="accordion-style-02-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-02">
                                         <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                            <p>Lorem ipsum is simply dummy text of the printing typesetting industry. Industry's standard dummy text ever since the dummy.</p>
+                                            <p>We offer comprehensive IT solutions, including Hardware & Software Support, Microsoft 365 services, Cloud Infrastructure, and advanced Network Management tailored to your needs.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -226,13 +197,13 @@
                                     <div class="accordion-header border-bottom border-color-extra-medium-gray">
                                         <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-02" aria-expanded="false" data-bs-parent="#accordion-style-02">
                                             <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                                <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">What is potential for AI in customer service?</span>
+                                                <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">Do you provide Cybersecurity services?</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div id="accordion-style-02-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
                                         <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                            <p>Lorem ipsum is simply dummy text of the printing typesetting industry. Industry's standard dummy text ever since the dummy.</p>
+                                            <p>Yes, we provide advanced cybersecurity protection to secure your sensitive data, IT assets, and network from external and internal threats.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -242,13 +213,13 @@
                                     <div class="accordion-header border-bottom border-color-extra-medium-gray">
                                         <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03" aria-expanded="false" data-bs-parent="#accordion-style-02">
                                             <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                                <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">Do you charge by the job or by the hour?</span>
+                                                <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">Do you charge by the project or have monthly plans?</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div id="accordion-style-02-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
                                         <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                            <p>Lorem ipsum is simply dummy text of the printing typesetting industry. Industry's standard dummy text ever since the dummy.</p>
+                                            <p>We offer flexible pricing options including hourly rates for ad-hoc support, project-based invoicing, and comprehensive monthly managed IT packages to perfectly fit your business scale.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -258,13 +229,13 @@
                                     <div class="accordion-header border-bottom border-color-transparent">
                                         <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-04" aria-expanded="false" data-bs-parent="#accordion-style-02">
                                             <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                                <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">Something marketing for everyone?</span>
+                                                <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">Can you help migrate our business to the cloud?</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div id="accordion-style-02-04" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
                                         <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent">
-                                            <p>Lorem ipsum is simply dummy text of the printing typesetting industry. Industry's standard dummy text ever since the dummy.</p>
+                                            <p>Absolutely! Our experts specialize in seamless cloud migrations, ensuring zero downtime, secure data transfer, and a highly scalable infrastructure designed for future growth.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -277,53 +248,7 @@
             <!-- end section -->
         </div>
         <!-- srat footer -->
-        <footer class="cover-background pb-0 overflow-visible" style="background-image: url('images/demo-modern-business-footer-bg.jpg')">
-            <img src="images/demo-modern-business-elements-04.png" alt="" class="position-absolute right-150px md-right-50px top-minus-60px animation-rotation d-none d-sm-block">
-            <div class="container overflow-hidden">
-                <div class="row position-relative z-index-9">
-                    <div class="col-12 col-xl-3 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-1">
-                        <a href="index" class="footer-logo mb-25px xs-mb-20px d-inline-block">
-                            <img src="images/demo-modern-business-logo-white.png" data-at2x="images/demo-modern-business-logo-white@2x.png" alt="">
-                        </a>
-                        <div class="elements-social social-text-style-01 mt-auto">
-                            <ul class="small-icon light">
-                                <li><a class="facebook" href="https://www.facebook.com/" target="_blank">Fb.</a></li>
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank">Ig.</a></li> 
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank">Tw.</a></li> 
-                                <li><a class="behance" href="http://www.behance.com/" target="_blank">Be.</a></li> 
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-2 order-3 sm-mb-20px">
-                        <p class="w-80 mb-20px md-w-100"><span class="text-white d-block">Crafto - Netherlands</span>Graaf florisstraat 22A, Netherlands - 1001</p>
-                        <p class="w-80 md-w-100"><span class="text-white d-block">Crafto - Barcelona</span>365 Grand via de coarts, Barcelona - 1002</p>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-3 order-4 sm-mb-30px">
-                        <p class="mb-0">Interested in working with us? </p>
-                        <a href="mailto:hello@yourdomain.com" class="text-white text-decoration-line-bottom mb-25px d-inline-block">hello@yourdomain.com</a>
-                        <p class="mb-0">Looking for a job opportunity?</p>
-                        <a href="mailto:hr@yourdomain.com" class="text-white text-decoration-line-bottom d-inline-block">hr@yourdomain.com</a>
-                    </div>
-                    <div class="col-12 col-xl-3 col-md-6 d-flex flex-column order-xl-4 order-2 lg-mb-30px sm-mb-20px">
-                        <span class="d-block text-white mb-15px">Sign up for the newsletter</span> 
-                        <div class="d-inline-block w-100 newsletter-style-02 position-relative mb-10px">
-                            <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative w-100">
-                                <input class="bg-transparent border-color-transparent-white-light w-100 form-control required" type="email" name="email" placeholder="Enter your email...">
-                                <input type="hidden" name="redirect" value="">
-                                <button type="submit" class="btn submit" aria-label="submit"><i class="icon bi bi-envelope icon-small text-white"></i></button>
-                                <div class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>
-                            </form>
-                        </div>
-                        <p class="mt-auto mb-0">� 2025 Crafto. Powered by <a href="https://www.themezaa.com/" target="_blank" class="fw-500 text-decoration-line-bottom text-medium-gray text-white-hover">ThemeZaa</a></p>
-                    </div>
-                </div>
-                <div class="row mb-minus-70px md-mb-minus-50px md-mb-minus-20px">
-                    <div class="col-12 text-center">
-                        <span class="text-base-color fs-300 xl-fs-250 lg-fs-200 sm-fs-150 xs-fs-100 fw-600 ls-minus-8px lg-ls-minus-4px w-100 opacity-6">scaleup</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('components.footer')
         <!-- end footer -->
         <!-- start crafto progressive blur -->
         <div class="crafto-progressive-blur crafto-progressive-blur-bottom" blur-bottom="yes" style="--progressive-blur-height:15vh"></div>
