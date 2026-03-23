@@ -57,106 +57,21 @@
                 <div class="container">
                     <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
-                        <!-- Card 1 -->
+                        <!-- start dynamic service loop -->
+                        @foreach($services as $service)
                         <div class="col transition-inner-all mb-30px">
                             <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_hardware.png" alt="Hardware Support" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                <a href="{{ url('services-details/' . $service->slug) }}" class="text-center d-block mb-30px">
+                                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" style="height: 250px; width: auto; object-fit: contain;">
+                                </a>
                                 <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Hardware Support & Maintenance</a>
-                                    <p>Reliable support and maintenance to keep your hardware running optimally.</p>
+                                    <a href="{{ url('services-details/' . $service->slug) }}" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">{{ $service->title }}</a>
+                                    <p>{!! $service->short_description !!}</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Card 2 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_software.png" alt="Software Support" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Software Support</a>
-                                    <p>Expert assistance to resolve your software issues and improve efficiency.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_m365.png" alt="Microsoft 365" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Professional Microsoft 365 Services</a>
-                                    <p>Seamless integration and management for your Microsoft 365 environment.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_cloud.png" alt="Cloud Services" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Cloud Infrastructure Services</a>
-                                    <p>Scalable and secure cloud solutions tailored to your business needs.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 5 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_network.png" alt="Network Management" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Network Management Services</a>
-                                    <p>Comprehensive monitoring and management for robust network performance.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 6 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_security.png" alt="Cybersecurity" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Cybersecurity Services</a>
-                                    <p>Advanced protection to secure your sensitive data and IT assets.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 7 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_support.png" alt="IT Support" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Empower your IT Support/Project & Helpdesk</a>
-                                    <p>Responsive helpdesk support and efficient IT project implementation.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 8 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_backup.png" alt="Backup Recovery" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Backup and Disaster Recovery</a>
-                                    <p>Ensure business continuity with reliable backup and recovery plans.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 9 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_hosting.png" alt="Web Hosting" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Domain, Web & Email Hosting</a>
-                                    <p>Reliable hosting solutions and support for your online presence.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 10 -->
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
-                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_consulting.png" alt="IT Consulting" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">IT Consulting and Project Services</a>
-                                    <p>Strategic consulting to align your IT with business objectives.</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+                        <!-- end dynamic service loop -->
                     </div>
                 </div>
             </section>

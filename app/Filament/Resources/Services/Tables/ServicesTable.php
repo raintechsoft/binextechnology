@@ -15,6 +15,14 @@ class ServicesTable
     {
         return $table
             ->columns([
+                \Filament\Tables\Columns\ImageColumn::make('image')
+                    ->circular()
+                    ->getStateUsing(function ($record) {
+                        if (!$record->image) return null;
+                        return str_starts_with($record->image, 'images/') 
+                            ? asset($record->image) 
+                            : $record->image; 
+                    }),
                 TextColumn::make('title')
                     ->searchable(),
                 TextColumn::make('slug')

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Filament\Resources\Clients\Schemas;
+namespace App\Filament\Resources\ContactMessages\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
-class ClientForm
+class ContactMessageForm
 {
     public static function configure(Schema $schema): Schema
     {
@@ -14,12 +15,14 @@ class ClientForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                \Filament\Forms\Components\FileUpload::make('logo')
-                    ->image()
-                    ->disk('public')
-                    ->directory('clients')
+                TextInput::make('email')
+                    ->label('Email address')
+                    ->email()
                     ->required(),
-                Toggle::make('is_active')
+                Textarea::make('message')
+                    ->required()
+                    ->columnSpanFull(),
+                Toggle::make('is_read')
                     ->required(),
             ]);
     }

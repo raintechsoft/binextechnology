@@ -8,22 +8,25 @@
                         </a>
                         <div class="elements-social social-text-style-01 mt-auto">
                             <ul class="small-icon light">
-                                <li><a class="facebook" href="https://www.facebook.com/" target="_blank">Fb.</a></li>
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank">Ig.</a></li> 
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank">Tw.</a></li> 
-                                <li><a class="behance" href="http://www.behance.com/" target="_blank">Be.</a></li> 
+                                @php $settings = \App\Models\SiteSetting::first() @endphp
+                                @if($settings?->facebook_url)<li><a class="facebook" href="{{ $settings->facebook_url }}" target="_blank">Fb.</a></li>@endif
+                                @if($settings?->instagram_url)<li><a class="instagram" href="{{ $settings->instagram_url }}" target="_blank">Ig.</a></li>@endif
+                                @if($settings?->twitter_url)<li><a class="twitter" href="{{ $settings->twitter_url }}" target="_blank">Tw.</a></li>@endif
+                                @if($settings?->behance_url)<li><a class="behance" href="{{ $settings->behance_url }}" target="_blank">Be.</a></li>@endif
+                                @if($settings?->linkedin_url)<li><a class="linkedin" href="{{ $settings->linkedin_url }}" target="_blank">In.</a></li>@endif
                             </ul>
                         </div>
                     </div>
                     <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-2 order-3 sm-mb-20px">
-                        <p class="w-80 mb-20px md-w-100"><span class="text-white d-block">Binex Technology Solutions</span>Dublin, Ireland</p>
-                        <p class="w-80 md-w-100"><span class="text-white d-block">Binex Support Center</span>24/7 Remote & On-Site IT Support</p>
+                        @php $settings = \App\Models\SiteSetting::first() @endphp
+                        <p class="w-80 mb-20px md-w-100"><span class="text-white d-block">{{ $settings->company_name ?? 'Binex Technology Solutions' }}</span>{{ $settings->address ?? 'Dublin, Ireland' }}</p>
+                        <p class="w-80 md-w-100"><span class="text-white d-block">Binex Support Center</span>{{ $settings->support_text ?? '24/7 Remote & On-Site IT Support' }}</p>
                     </div>
                     <div class="col-12 col-xl-3 col-md-6 last-paragraph-no-margin order-xl-3 order-4 sm-mb-30px">
                         <p class="mb-0">Interested in working with us? </p>
-                        <a href="mailto:info@binex.ie" class="text-white text-decoration-line-bottom mb-25px d-inline-block">info@binex.ie</a>
+                        <a href="mailto:{{ $settings->email ?? 'info@binex.ie' }}" class="text-white text-decoration-line-bottom mb-25px d-inline-block">{{ $settings->email ?? 'info@binex.ie' }}</a>
                         <p class="mb-0">Looking for a job opportunity?</p>
-                        <a href="mailto:careers@binex.ie" class="text-white text-decoration-line-bottom d-inline-block">careers@binex.ie</a>
+                        <a href="mailto:{{ $settings->careers_email ?? 'careers@binex.ie' }}" class="text-white text-decoration-line-bottom d-inline-block">{{ $settings->careers_email ?? 'careers@binex.ie' }}</a>
                     </div>
                     <div class="col-12 col-xl-3 col-md-6 d-flex flex-column order-xl-4 order-2 lg-mb-30px sm-mb-20px">
                         <span class="d-block text-white mb-15px">Sign up for the newsletter</span> 

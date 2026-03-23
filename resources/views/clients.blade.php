@@ -57,50 +57,17 @@
             <section id="down-section" class="position-relative">
                 <div class="container" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <div class="row row-cols-1 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 gap-y-4 justify-content-center">
-                        <!-- start client static items -->
+                        <!-- start client dynamic items -->
+                        @foreach($clients as $client)
                         <div class="col transition-inner-all mb-30px">
                             <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
                                 <a href="#">
-                                    <img src="images/logo-monday-dark-blue-01.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
+                                    <img src="{{ asset('storage/' . $client->logo) }}" class="h-160px sm-h-100px" alt="{{ $client->name }}" style="object-fit: contain;">
                                 </a>
                             </div>
                         </div>
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
-                                <a href="#">
-                                    <img src="images/logo-loitech-dark-blue.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
-                                <a href="#">
-                                    <img src="images/logo-invision-dark-blue.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
-                                <a href="#">
-                                    <img src="images/logo-monday-dark-gray-02.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
-                                <a href="#">
-                                    <img src="images/logo-dropbox-dark-gray-02.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col transition-inner-all mb-30px">
-                            <div class="box-shadow-extra-large border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px text-center d-flex align-items-center justify-content-center h-100" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); min-height: 180px;">
-                                <a href="#">
-                                    <img src="images/logo-slack-dark-gray-02.svg" class="h-80px sm-h-60px" alt="Client Logo" style="object-fit: contain;">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- end client static items -->
+                        @endforeach
+                        <!-- end client dynamic items -->
                     </div>
                 </div>
             </section>

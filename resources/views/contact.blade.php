@@ -63,7 +63,11 @@
                         </div>
                         <div class="col-xl-6 col-lg-7 offset-xl-1 col-md-12 mt-40px  md-mt-0 position-relative">
                             <!-- start contact form -->
-                            <form action="email-templates/contact-form.php" method="post" class="contact-form-style-07" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            @if(session('success'))
+                                <div class="alert alert-success">{{ session('success') }}</div>
+                            @endif
+                            <form action="{{ url('/contact-message') }}" method="post" class="contact-form-style-07" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                @csrf
                                 <div class="position-relative form-group mb-30px d-flex flex-md-row flex-column">
                                     <label for="exampleInputEmail1" class="form-label alt-font fs-24 ls-minus-05px text-dark-gray fw-600 mb-0 me-30px md-me-0px align-self-start align-self-md-center">Name</label>
                                     <div class="position-relative col">
@@ -91,7 +95,7 @@
                                     </div>
                                     <div class="col-xl-4 col-sm-5 text-center text-sm-end xs-mt-25px">
                                         <input id="exampleInputEmail3" type="hidden" name="redirect" value="">
-                                        <button class="btn btn-medium btn-base-color btn-box-shadow text-transform-none btn-rounded submit border-0" type="submit">Send message</button>
+                                        <button class="btn btn-medium btn-base-color btn-box-shadow text-transform-none btn-rounded border-0" type="submit">Send message</button>
                                     </div>
                                     <div class="col-12 mt-20px mb-0 text-center text-md-start">
                                         <div class="form-results d-none"></div>
@@ -111,10 +115,11 @@
                         <!-- start social icon -->
                         <div class="col-md-auto elements-social social-icon-style-04 text-center text-md-start ps-lg-0">
                             <ul class="large-icon dark">
-                                <li class="m-0"><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
-                                <li class="m-0"><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
-                                <li class="m-0"><a class="twitter" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>      
-                                <li class="m-0"><a class="instagram" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                @php $settings = \App\Models\SiteSetting::first() @endphp
+                                @if($settings?->linkedin_url)<li class="m-0"><a class="linkedin" href="{{ $settings->linkedin_url }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>@endif
+                                @if($settings?->facebook_url)<li class="m-0"><a class="facebook" href="{{ $settings->facebook_url }}" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>@endif
+                                @if($settings?->twitter_url)<li class="m-0"><a class="twitter" href="{{ $settings->twitter_url }}" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>@endif
+                                @if($settings?->instagram_url)<li class="m-0"><a class="instagram" href="{{ $settings->instagram_url }}" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>@endif
                             </ul>                  
                         </div>
                         <!-- end social icon -->

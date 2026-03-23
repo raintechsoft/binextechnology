@@ -73,56 +73,16 @@
                     <div class="row position-relative clients-style-08">
                         <div class="col swiper text-center feather-shadow" data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 4000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1400": { "slidesPerView": 6 }, "1200": { "slidesPerView": 5 }, "768": { "slidesPerView": 3 } }, "effect": "slide" }'>
                             <div class="swiper-wrapper marquee-slide">
+                                @php
+                                    $activeClients = \App\Models\Client::where('is_active', true)->get();
+                                @endphp
+                                @foreach($activeClients as $client)
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-02.svg" class="h-25px" alt="" /></a>
+                                    <a href="#"><img src="{{ asset('storage/' . $client->logo) }}" class="h-25px" alt="{{ $client->name }}" /></a>
                                 </div>
                                 <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-03.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-04.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-05.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-06.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-07.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-02.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-03.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-04.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
-                                <!-- start client item -->
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="images/demo-branding-studio-client-05.svg" class="h-25px" alt="" /></a>
-                                </div>
-                                <!-- end client item -->
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -186,116 +146,22 @@
                             <div class="outside-box-right-15 outside-box-left-15 sm-outside-box-right-0 sm-outside-box-left-0">
                                 <div class="swiper magic-cursor" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "autoplay": { "delay": 250000, "disableOnInteraction": false },  "pagination": { "el": ".slider-four-slide-pagination-1", "clickable": true }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1600": { "slidesPerView": 6 }, "1400": { "slidesPerView": 5 }, "1200": { "slidesPerView": 4 }, "991": { "slidesPerView": 3 }, "768": { "slidesPerView": 3 } }, "effect": "slide" }'>
                                     <div class="swiper-wrapper pt-30px pb-30px">
-                                        <!-- start slider item --> 
+                                        <!-- start dynamic slider item -->
+                                        @php
+                                            $homeServices = \App\Models\Service::where('is_active', true)->get();
+                                        @endphp
+                                        @foreach($homeServices as $service)
                                         <div class="swiper-slide box-shadow-extra-large h-auto">
                                             <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_hardware.png" alt="Hardware Support" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                                <a href="{{ url('services-details/' . $service->slug) }}" class="text-center d-block mb-30px"><img src="{{ asset($service->image) }}" alt="{{ $service->title }}" style="height: 250px; width: auto; object-fit: contain;"></a>
                                                 <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Hardware Support & Maintenance</a>
-                                                    <p>Reliable support and maintenance to keep your hardware running optimally.</p>
+                                                    <a href="{{ url('services-details/' . $service->slug) }}" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">{{ $service->title }}</a>
+                                                    <p>{!! $service->short_description !!}</p>
                                                 </div>
                                             </div> 
                                         </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_software.png" alt="Software Support" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Software Support</a>
-                                                    <p>Expert assistance to resolve your software issues and improve efficiency.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_m365.png" alt="Microsoft 365" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Professional Microsoft 365 Services</a>
-                                                    <p>Seamless integration and management for your Microsoft 365 environment.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item --> 
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_cloud.png" alt="Cloud Services" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Cloud Infrastructure Services</a>
-                                                    <p>Scalable and secure cloud solutions tailored to your business needs.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_network.png" alt="Network Management" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Network Management Services</a>
-                                                    <p>Comprehensive monitoring and management for robust network performance.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item --> 
-                                        <div class="swiper-slide box-shadow-extra-large h-auto">
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_security.png" alt="Cybersecurity" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Cybersecurity Services</a>
-                                                    <p>Advanced protection to secure your sensitive data and IT assets.</p>
-                                                </div>
-                                            </div> 
-                                        </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_support.png" alt="IT Support" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Empower your IT Support/Project & Helpdesk Services</a>
-                                                    <p>Responsive helpdesk support and efficient IT project implementation.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_backup.png" alt="Backup Recovery" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Backup and Disaster Recovery</a>
-                                                    <p>Ensure business continuity with reliable backup and recovery plans.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item --> 
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_hosting.png" alt="Web Hosting" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">Domain Registrar, Web & Email Hosting and Support</a>
-                                                    <p>Reliable hosting solutions and support for your online presence.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item -->
-                                        <!-- start slider item -->
-                                        <div class="swiper-slide box-shadow-extra-large h-auto"> 
-                                            <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="services-details" class="text-center d-block mb-30px"><img src="images/binolex/sv_consulting.png" alt="IT Consulting" style="height: 250px; width: auto; object-fit: contain;"></a>
-                                                <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
-                                                    <a href="services-details" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">IT Consulting and Project Services</a>
-                                                    <p>Strategic consulting to align your IT with business objectives.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end slider item -->
+                                        @endforeach
+                                        <!-- end dynamic slider item -->
                                     </div>
                                 </div>
                             </div>

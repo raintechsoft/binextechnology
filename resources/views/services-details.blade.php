@@ -38,8 +38,8 @@
                     </div>
                     <div class="row align-items-center justify-content-center position-relative z-index-1 h-350px sm-h-250px">
                         <div class="col-md-6 text-center position-relative page-title-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <h1 class="alt-font d-inline-block fw-700 ls-0px text-dark-gray mb-15px">IT Support Services</h1>
-                            <p class="mx-auto w-50 xl-w-70 md-w-100 mb-0">We deliver smart, highly secured, and robust IT solutions to empower your business operations.</p>
+                            <h1 class="alt-font d-inline-block fw-700 ls-0px text-dark-gray mb-15px">{{ isset($service) ? $service->title : 'IT Support Services' }}</h1>
+                            <p class="mx-auto w-50 xl-w-70 md-w-100 mb-0">{!! isset($service) ? $service->short_description : 'We deliver smart, highly secured, and robust IT solutions.' !!}</p>
                         </div>
                         <div class="down-section text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <a href="#down-section" class="section-link">
@@ -60,11 +60,12 @@
                             <div class="position-sticky top-80px lg-top-40px">
                                 <div class="mb-30px">
                                     <ul class="p-0 m-0 list-style-02 fs-18 fw-600">
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-base-color text-base-color-hover">IT Support Services</a><i class="bi bi-headset fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Cloud Infrastructure</a><i class="bi bi-cloud fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Cybersecurity</a><i class="bi bi-shield-check fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px mb-15px border-bottom border-color-extra-medium-gray"><a href="services-details" class="text-dark-gray text-base-color-hover">Network Management</a><i class="bi bi-hdd-network fs-22 ms-auto text-dark-gray"></i></li>
-                                        <li class="pb-15px"><a href="services-details" class="text-dark-gray text-base-color-hover">Disaster Recovery</a><i class="bi bi-database-check fs-22 ms-auto text-dark-gray"></i></li>
+                                        @foreach($allServices as $navService)
+                                        <li class="pb-15px {{ !$loop->last ? 'mb-15px border-bottom border-color-extra-medium-gray' : '' }}">
+                                            <a href="{{ url('services-details/' . $navService->slug) }}" class="{{ isset($service) && $service->id === $navService->id ? 'text-base-color' : 'text-dark-gray' }} text-base-color-hover">{{ $navService->title }}</a>
+                                            <i class="{{ $navService->icon ?? 'bi bi-dash' }} fs-22 ms-auto {{ isset($service) && $service->id === $navService->id ? 'text-base-color' : 'text-dark-gray' }}"></i>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <div class="ps-14 pe-14 xl-ps-10 xl-pe-10 pt-10 pb-10 lg-p-25px bg-dark-gray border-radius-6px text-center text-lg-start">
@@ -81,30 +82,16 @@
                             </div>
                         </div>
                         <div class="col-lg-8 order-1 order-lg-2 md-mb-50px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                            <h4 class="fw-700 text-dark-gray mb-20px alt-font">Comprehensive IT Support & Management</h4>
-                            <p>Managing an entire enterprise infrastructure is a complex task, but our proven process makes it straightforward. Securing your network is just as important as <span class="text-dark-gray text-decoration-line-bottom fw-500">designing scalable systems,</span> such as robust servers and rapid cloud deployments, so take the time to rely on our integrated approach.</p>
-                            <div class="bg-very-light-gray p-6 mt-6 mb-9 border-radius-6px">
-                                <div class="row align-items-center">
-                                    <div class="col-md-6 pe-5 lg-pe-15px md-mb-20px">
-                                        <span class="fs-18 fw-600 text-dark-gray mb-20px d-block">Core IT Strategies</span>
-                                        <ul class="p-0 m-0 list-style-02 text-dark-gray">
-                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>24/7 Managed IT Services</li>
-                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>On-Site and Remote Assistance</li>
-                                            <li class="pb-10px mb-10px border-bottom border-color-transparent-dark-very-light"><i class="fa-solid fa-check fs-15 me-10px"></i>Hardware Procurement & Setup</li>
-                                            <li class="pb-10px"><i class="fa-solid fa-check fs-15 me-10px"></i>Disaster Recovery & Daily Backups</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="images/binolex/sv_support.png" alt="IT Support"/>
-                                    </div>
+                            
+                            @if(isset($service))
+                                @if($service->image)
+                                <img src="{{ asset($service->image) }}" class="mb-30px border-radius-10px" alt="{{ $service->title }}" style="width: 100%; max-height: 400px; object-fit: contain; background: #f8f9fa;">
+                                @endif
+                                <div class="service-content">
+                                    {!! $service->description !!}
                                 </div>
-                            </div>
-                            <h4 class="fw-700 text-dark-gray mb-20px alt-font">Strategies for Sustainable Growth</h4>
-                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Cloud Integrations</span> - Unlock true scalability and enable hybrid work environments with structured Microsoft 365 and Azure migrations tailored to your exact workflows.</p>
-                            <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray mb-25px mt-25px"></div>
-                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Cybersecurity Implementation</span> - Protect highly sensitive company and client data with multi-layer firewall monitoring, endpoint detection, and proactive threat intelligence.</p>
-                            <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray mb-25px mt-25px"></div>
-                            <p><span class="fw-600 text-dark-gray text-decoration-line-bottom">Continuous Maintenance</span> - Avoid costly downtimes with proactive asset management and routine patching mapped across your entire organization architecture.</p>
+                            @endif
+
                             <div class="bg-base-color p-35px border-radius-6px mt-9">
                                 <div class="row align-items-center justify-content-center justify-content-lg-start">
                                     <div class="col-5 col-sm-3 sm-mb-20px text-center"><img src="images/binolex/sv_software.png" alt="Software Support"/></div>

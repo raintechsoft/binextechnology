@@ -7,8 +7,15 @@
                                 <div class="fs-14 text-dark-gray fw-500">&#128075; Welcome to Binex Technology Solutions Limited.</div>
                             </div>
                             <div class="col-lg-6 col-md-5 text-end d-none d-md-flex">
-                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:info@binex.ie" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>info@binex.ie</a></div>
-                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>Dublin, Ireland</div> 
+                                @php
+                                    $settings = \App\Models\SiteSetting::first();
+                                @endphp
+                                @if($settings && $settings->email)
+                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:{{ $settings->email }}" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>{{ $settings->email }}</a></div>
+                                @endif
+                                @if($settings && $settings->address)
+                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>{{ $settings->address }}</div> 
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -39,89 +46,30 @@
                                         <a href="services" class="nav-link">Services</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <!-- dynamic dropdown start -->
+                                            @php
+                                                $headerServices = \App\Models\Service::where('is_active', true)->get();
+                                            @endphp
+                                            @foreach($headerServices as $service)
                                             <li>
-                                                <a href="services-details"><i class="bi bi-pc-display"></i>
+                                                <a href="{{ url('services-details/' . $service->slug) }}"><i class="{{ $service->icon ?? 'bi bi-dash' }}"></i>
                                                     <div class="submenu-icon-content">
-                                                        <span>Hardware Support</span>
-                                                        <p>Optimizing your IT hardware.</p>
+                                                        <span>{{ $service->title }}</span>
+                                                        <p>{{ \Illuminate\Support\Str::words(strip_tags($service->short_description), 5) }}</p>
                                                     </div>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-window-sidebar"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Software Support</span>
-                                                        <p>Expert assistance to improve efficiency.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-microsoft"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Microsoft 365</span>
-                                                        <p>Seamless Microsoft integrations.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-cloud"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Cloud Infrastructure</span>
-                                                        <p>Scalable and secure cloud solutions.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-hdd-network"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Network Management</span>
-                                                        <p>Robust monitoring & management.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-shield-check"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Cybersecurity Services</span>
-                                                        <p>Advanced protection for digital assets.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-headset"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>IT Helpdesk</span>
-                                                        <p>Responsive technical support.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-database-check"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Disaster Recovery</span>
-                                                        <p>Ensuring your business continuity.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-globe"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>Web Hosting</span>
-                                                        <p>Reliable online presence hosting.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="services-details"><i class="bi bi-diagram-3"></i>
-                                                    <div class="submenu-icon-content">
-                                                        <span>IT Consulting</span>
-                                                        <p>Strategic technical consulting.</p>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                            @endforeach
+                                            <!-- dynamic dropdown end -->
                                         </ul>
                                     </li>
+                                    @php
+                                        $showClients = \App\Models\SiteSetting::first()->show_clients_page ?? true;
+                                        $hasClients = \App\Models\Client::where('is_active', true)->exists();
+                                    @endphp
+                                    @if($showClients && $hasClients)
                                     <li class="nav-item"><a href="clients" class="nav-link">Clients</a></li>
+                                    @endif
                                     <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
                                 </ul>
                             </div>
@@ -129,7 +77,7 @@
                         <div class="col-auto text-end d-none d-sm-flex">
                             <div class="header-icon"> 
                                 <div class="header-button ms-10px d-none d-xl-inline-block">
-                                    <a href="mailto:info@binex.ie" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
+                                    <a href="mailto:{{ \App\Models\SiteSetting::first()->email ?? 'info@binex.ie' }}" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
                                         <span>
                                             <span class="btn-double-text" data-text="Get started">Get started</span>
                                             <span><i class="feather icon-feather-mail"></i></span>
