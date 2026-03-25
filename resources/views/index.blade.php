@@ -79,7 +79,7 @@
                                 @foreach($activeClients as $client)
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <a href="#"><img src="{{ asset('storage/' . $client->logo) }}" class="h-25px" alt="{{ $client->name }}" /></a>
+                                    <a href="#"><img src="{{ asset('storage/' . $client->logo) }}" class="h-60px md-h-50px sm-h-40px" alt="{{ $client->name }}" /></a>
                                 </div>
                                 <!-- end client item -->
                                 @endforeach
@@ -153,7 +153,7 @@
                                         @foreach($homeServices as $service)
                                         <div class="swiper-slide box-shadow-extra-large h-auto">
                                             <div class="border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start h-100 d-flex flex-column">
-                                                <a href="{{ url('services-details/' . $service->slug) }}" class="text-center d-block mb-30px"><img src="{{ asset($service->image) }}" alt="{{ $service->title }}" style="height: 250px; width: auto; object-fit: contain;"></a>
+                                                <a href="{{ url('services-details/' . $service->slug) }}" class="text-center d-block mb-30px"><img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" style="height: 250px; width: auto; object-fit: contain;"></a>
                                                 <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
                                                     <a href="{{ url('services-details/' . $service->slug) }}" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">{{ $service->title }}</a>
                                                     <p>{!! $service->short_description !!}</p>
@@ -361,7 +361,8 @@
                             <span class="ps-20px pe-20px pt-5px pb-5px mb-20px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i class="bi bi-headphones fs-16 me-5px"></i>Customer support</span>
                             <h2 class="alt-font text-dark-gray fw-700 mb-15px">Got questions?</h2>
                             <p class="mb-0">If you have any other questions?</p>
-                            <p>Please get in touch at <a href="mailto:info@binex.ie" class="text-dark-gray border-bottom border-color-dark-gray fw-500">info@binex.ie</a></p>
+                            @php $email = \App\Models\ContactDetail::first()?->email ?? 'info@binex.ie'; @endphp
+                            <p>Please get in touch at <a href="mailto:{{ $email }}" class="text-dark-gray border-bottom border-color-dark-gray fw-500">{{ $email }}</a></p>
                             <div class="border-top border-color-extra-medium-gray mt-30px pt-10px w-100 sm-mt-5px d-flex align-items-center">
                                 <span class="fs-18 position-relative text-start">Support executive <span class="fw-600 text-dark-gray d-block">1000+ satisfied.</span></span>
                             </div>

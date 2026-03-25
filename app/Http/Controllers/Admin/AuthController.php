@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
-        return view('admin_2.auth.login');
+        return view('admin.auth.login');
     }
 
     public function login(Request $request)
@@ -23,7 +23,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('admin_2.dashboard'));
+            return redirect()->intended(route('admin.dashboard'));
         }
 
         return back()->withErrors([
@@ -38,6 +38,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('admin_2.login');
+        return redirect()->route('admin.login');
     }
 }

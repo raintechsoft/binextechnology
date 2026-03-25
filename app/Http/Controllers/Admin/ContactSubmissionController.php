@@ -11,14 +11,14 @@ class ContactSubmissionController extends Controller
     public function index()
     {
         $submissions = ContactSubmission::latest()->paginate(15);
-        return view('admin_2.contact_submissions.index', compact('submissions'));
+        return view('admin.contact_submissions.index', compact('submissions'));
     }
 
     public function destroy(ContactSubmission $contactSubmission)
     {
         $contactSubmission->delete();
         
-        return redirect()->route('admin_2.contact_submissions.index')
+        return redirect()->route('admin.contact_submissions.index')
             ->with('success', 'Message deleted successfully.');
     }
 }

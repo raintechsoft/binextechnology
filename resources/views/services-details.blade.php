@@ -85,7 +85,7 @@
                             
                             @if(isset($service))
                                 @if($service->image)
-                                <img src="{{ asset($service->image) }}" class="mb-30px border-radius-10px" alt="{{ $service->title }}" style="width: 100%; max-height: 400px; object-fit: contain; background: #f8f9fa;">
+                                <img src="{{ asset('storage/' . $service->image) }}" class="mb-30px border-radius-10px" alt="{{ $service->title }}" style="width: 100%; max-height: 400px; object-fit: contain; background: #f8f9fa;">
                                 @endif
                                 <div class="service-content">
                                     {!! $service->description !!}

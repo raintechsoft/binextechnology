@@ -62,7 +62,7 @@
                         <div class="col transition-inner-all mb-30px">
                             <div class="box-shadow-extra-large h-100 border-radius-10px bg-white pt-40px pb-40px ps-40px pe-40px xxl-p-30px justify-content-start text-start d-flex flex-column">
                                 <a href="{{ url('services-details/' . $service->slug) }}" class="text-center d-block mb-30px">
-                                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" style="height: 250px; width: auto; object-fit: contain;">
+                                    <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" style="height: 250px; width: auto; object-fit: contain;">
                                 </a>
                                 <div class="last-paragraph-no-margin text-center text-md-start mt-auto">
                                     <a href="{{ url('services-details/' . $service->slug) }}" class="d-inline-block alt-font text-dark-gray fw-600 fs-18 mb-5px ls-minus-05px" style="min-height: 54px;">{{ $service->title }}</a>

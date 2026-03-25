@@ -68,3 +68,7 @@ Route::get('/services-details/{slug?}', function ($slug = null) {
 Route::get('/about-us', function () {
     return view('about-us');
 });
+
+Route::get('/login', function () {
+    return redirect()->route('admin.login');
+})->name('login');

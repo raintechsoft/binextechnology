@@ -115,11 +115,11 @@
                         <!-- start social icon -->
                         <div class="col-md-auto elements-social social-icon-style-04 text-center text-md-start ps-lg-0">
                             <ul class="large-icon dark">
-                                @php $settings = \App\Models\SiteSetting::first() @endphp
-                                @if($settings?->linkedin_url)<li class="m-0"><a class="linkedin" href="{{ $settings->linkedin_url }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>@endif
-                                @if($settings?->facebook_url)<li class="m-0"><a class="facebook" href="{{ $settings->facebook_url }}" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>@endif
-                                @if($settings?->twitter_url)<li class="m-0"><a class="twitter" href="{{ $settings->twitter_url }}" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>@endif
-                                @if($settings?->instagram_url)<li class="m-0"><a class="instagram" href="{{ $settings->instagram_url }}" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>@endif
+                                @php $settings = \App\Models\SiteSetting::first(); $contact = \App\Models\ContactDetail::first(); @endphp
+                                @if($contact?->linkedin)<li class="m-0"><a class="linkedin" href="{{ $contact->linkedin }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>@endif
+                                @if($contact?->facebook)<li class="m-0"><a class="facebook" href="{{ $contact->facebook }}" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>@endif
+                                @if($contact?->twitter)<li class="m-0"><a class="twitter" href="{{ $contact->twitter }}" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>@endif
+                                @if($contact?->instagram)<li class="m-0"><a class="instagram" href="{{ $contact->instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>@endif
                             </ul>                  
                         </div>
                         <!-- end social icon -->

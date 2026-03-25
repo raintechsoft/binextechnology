@@ -67,9 +67,10 @@
                             </div>
                         </div>
                         <div class="col-xxl-5 col-lg-6" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <span class="ps-20px pe-20px pt-5px pb-5px mb-20px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i class="bi bi-shield-check fs-16 me-5px"></i>Your Trusted IT Partner</span>
-                            <h2 class="alt-font text-dark-gray fw-700 mb-20px md-w-80 sm-w-100">The leading IT provider for business success.</h2>
-                            <p class="w-90 sm-w-100">We specialize in delivering robust IT infrastructure, cybersecurity, and cloud solutions designed to scale with your business. Our expert team ensures your systems are secure, efficient, and aligned with your operational goals.</p>
+                            <span class="ps-20px pe-20px pt-5px pb-5px mb-20px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i class="bi bi-shield-check fs-16 me-5px"></i>Who We Are</span>
+                            <h2 class="alt-font text-dark-gray fw-700 mb-20px md-w-80 sm-w-100">Practical, high-quality IT solutions.</h2>
+                            <p class="w-90 sm-w-100">Bi-Nex Technology Solutions Limited is a modern IT services provider dedicated to helping businesses operate efficiently, securely, and with confidence. We specialize in delivering reliable technology solutions that support everyday business operations from infrastructure and cloud services to cybersecurity and user support.</p>
+                            <p class="w-90 sm-w-100 mb-30px fw-500 text-dark-gray">Our approach is simple: provide practical, high-quality IT solutions that solve real business challenges.</p>
                             <div class="bg-white border border-color-extra-medium-gray box-shadow-quadruple-large border-radius-6px p-25px lg-p-20px text-start last-paragraph-no-margin w-90 mb-20px sm-w-100">
                                 <div class="row align-items-center justify-content-center text-dark-gray">
                                     <div class="col-auto pe-25px lg-pe-15px text-end border-end border-color-transparent-dark-light xs-pe-15px">
@@ -90,40 +91,80 @@
                 </div>
             </section>
             <!-- end section -->
+            </section>
+            <!-- end section -->
+
             <!-- start section -->
-            <section class="pt-0" data-anime='{"opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <section class="bg-gradient-very-light-gray pb-0">
+                <div class="container">
+                    <div class="row text-center justify-content-center mb-5">
+                        <div class="col-lg-8" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 bg-white border border-color-extra-medium-gray border-radius-100px ps-20px pe-20px pt-5px pb-5px d-inline-flex mb-15px">Our Purpose</span>
+                            <h2 class="alt-font text-dark-gray fw-700 mb-0">Mission & Vision</h2>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-2 justify-content-center g-5 mb-8" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <!-- Our Mission -->
+                        <div class="col">
+                            <div class="bg-white border-radius-10px p-50px sm-p-30px h-100 box-shadow-quadruple-large border border-color-extra-medium-gray">
+                                <div class="mb-20px">
+                                    <i class="bi bi-bullseye text-base-color fs-50"></i>
+                                </div>
+                                <h4 class="alt-font text-dark-gray fw-700 mb-15px">Our Mission</h4>
+                                <p class="mb-15px">Our mission is to empower businesses with dependable, secure, and scalable technology solutions that enhance productivity and reduce operational complexity.</p>
+                                <p class="mb-0">We aim to bridge the gap between business needs and technology by delivering services that are not only effective but also easy to manage and maintain.</p>
+                            </div>
+                        </div>
+                        <!-- Our Vision -->
+                        <div class="col">
+                            <div class="bg-white border-radius-10px p-50px sm-p-30px h-100 box-shadow-quadruple-large border border-color-extra-medium-gray">
+                                <div class="mb-20px">
+                                    <i class="bi bi-eye text-base-color fs-50"></i>
+                                </div>
+                                <h4 class="alt-font text-dark-gray fw-700 mb-15px">Our Vision</h4>
+                                <p class="mb-15px">Our vision is to become a trusted technology partner for businesses, enabling digital transformation through smart, secure, and future-ready IT solutions.</p>
+                                <p class="mb-0">We strive to create a future where businesses can rely on technology as a strong foundation for growth, innovation, and long-term success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end section -->
+
+            <!-- start section -->
+            <section class="pt-5" data-anime='{"opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="container-fluid">
                     <div class="row position-relative">
                         <div class="col swiper swiper-width-auto feather-shadow text-center pb-20px sm-pb-10px" data-slider-options='{ "slidesPerView": "auto", "spaceBetween":90, "speed": 8000, "loop": true, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
                             <div class="swiper-wrapper marquee-slide">
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <div class="fs-120 md-fs-100 sm-fs-90 text-dark-gray fw-700 ls-minus-5px">engineers</div>
+                                    <div class="fs-120 md-fs-100 sm-fs-90 text-dark-gray fw-700 ls-minus-5px">innovation</div>
                                 </div>
                                 <!-- end client item -->
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <div class="fs-120 md-fs-100 sm-fs-90 fw-600 text-extra-medium-gray ls-minus-5px">developers</div>
+                                    <div class="fs-120 md-fs-100 sm-fs-90 fw-600 text-extra-medium-gray ls-minus-5px">reliability</div>
                                 </div>
                                 <!-- end client item -->
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <div class="fs-120 md-fs-100 sm-fs-90 text-dark-gray fw-700 ls-minus-5px">innovators</div>
+                                    <div class="fs-120 md-fs-100 sm-fs-90 text-dark-gray fw-700 ls-minus-5px">transparency</div>
                                 </div>
                                 <!-- end client item -->
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <div class="fs-120 md-fs-100 sm-fs-90 fw-600 text-extra-medium-gray ls-minus-5px">strategists</div>
+                                    <div class="fs-120 md-fs-100 sm-fs-90 fw-600 text-extra-medium-gray ls-minus-5px">success</div>
                                 </div>
                                 <!-- end client item -->
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <div class="fs-120 md-fs-100 sm-fs-90 text-dark-gray fw-700 ls-minus-5px">architects</div>
+                                    <div class="fs-120 md-fs-100 sm-fs-90 text-dark-gray fw-700 ls-minus-5px">security</div>
                                 </div>
                                 <!-- end client item -->
                                 <!-- start client item -->
                                 <div class="swiper-slide">
-                                    <div class="fs-120 md-fs-100 sm-fs-90 fw-600 text-extra-medium-gray ls-minus-5px">innovators</div>
+                                    <div class="fs-120 md-fs-100 sm-fs-90 fw-600 text-extra-medium-gray ls-minus-5px">support</div>
                                 </div>
                                 <!-- end client item -->
                             </div> 
@@ -133,40 +174,166 @@
             </section>
             <!-- end section -->
             <!-- start section -->
-            <section class="cover-background border-radius-10px lg-no-border-radius overflow-visible" style="background-image: url('images/binolex/bg.png')">
-                <img src="images/binolex/arc.png" alt="" class="position-absolute left-70px top-minus-50px animation-rotation d-none d-md-block">
-                <div class="container overflow-hidden">
-                    <div class="row" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="col-12 text-center mb-50px sm-mb-30px">
-                            <span class="ps-20px pe-20px pt-5px pb-5px mb-20px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i class="bi bi-heart-fill fs-16 me-5px"></i>Facts that matter</span>
-                            <h2 class="alt-font text-dark-gray fw-700 mb-15px sm-mb-0">The numbers tell the story</h2>
+            <section class="bg-gradient-very-light-gray position-relative">
+                <div class="container">
+                    <div class="row mb-5 sm-mb-30px">
+                        <div class="col-12 text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 bg-white border border-color-extra-medium-gray border-radius-100px ps-20px pe-20px pt-5px pb-5px d-inline-flex mb-15px">Principals</span>
+                            <h2 class="alt-font text-dark-gray fw-700">Our Values</h2>
                         </div>
                     </div>
-                    <div class="row g-0 counter-style-04" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-base-color ps-35px pe-35px pt-25px pb-25px lg-ps-15px lg-pe-15px md-ps-35px md-pe-35px md-mb-50px sm-mb-30px">
-                            <div class="feature-box-content">
-                                <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-18 lh-28">Happy clients leveraging our innovative IT solutions.</p>
-                                <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0" data-text="+" data-to="45"><sup class="text-dark-gray top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center g-4 mb-8" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <!-- Value 1 -->
+                        <div class="col icon-with-text-style-01">
+                            <div class="feature-box feature-box-left-icon last-paragraph-no-margin bg-white border-radius-8px p-4 box-shadow-small h-100">
+                                <div class="feature-box-icon">
+                                    <i class="feather icon-feather-zap fs-40 text-base-color mb-20px d-block"></i>
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block alt-font text-dark-gray fw-700 fs-18 mb-5px">Innovation</span>
+                                    <p>We continuously adapt and evolve, embracing modern technologies to deliver smarter and more efficient solutions.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-base-color md-border-end ps-35px pe-35px pt-25px pb-25px lg-ps-15px lg-pe-15px md-ps-35px md-pe-35px md-mb-50px sm-mb-30px">
-                            <div class="feature-box-content">
-                                <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-18 lh-28">Successful IT projects & cloud deployments.</p>
-                                <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0" data-text="+" data-to="120"><sup class="text-dark-gray top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                        <!-- Value 2 -->
+                        <div class="col icon-with-text-style-01">
+                            <div class="feature-box feature-box-left-icon last-paragraph-no-margin bg-white border-radius-8px p-4 box-shadow-small h-100">
+                                <div class="feature-box-icon">
+                                    <i class="feather icon-feather-shield fs-40 text-base-color mb-20px d-block"></i>
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block alt-font text-dark-gray fw-700 fs-18 mb-5px">Reliability</span>
+                                    <p>We provide consistent, dependable services that businesses can trust every day.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-base-color ps-35px pe-35px pt-25px pb-25px lg-ps-15px lg-pe-15px md-ps-35px md-pe-35px sm-mb-30px">
-                            <div class="feature-box-content">
-                                <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-18 lh-28">Servers and endpoints managed securely 24/7.</p>
-                                <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0" data-text="+" data-to="350"><sup class="text-dark-gray top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                        <!-- Value 3 -->
+                        <div class="col icon-with-text-style-01">
+                            <div class="feature-box feature-box-left-icon last-paragraph-no-margin bg-white border-radius-8px p-4 box-shadow-small h-100">
+                                <div class="feature-box-icon">
+                                    <i class="feather icon-feather-users fs-40 text-base-color mb-20px d-block"></i>
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block alt-font text-dark-gray fw-700 fs-18 mb-5px">Transparency</span>
+                                    <p>We believe in clear communication, honest advice, and building long-term relationships.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 feature-box text-start hover-box border-start sm-border border-color-base-color md-border-end ps-35px pe-35px pt-25px pb-25px lg-ps-15px lg-pe-15px md-ps-35px md-pe-35px">
-                            <div class="feature-box-content">
-                                <p class="text-dark-gray mb-20 sm-mb-10 fw-500 w-90 fs-18 lh-28">Average improvement in client operational efficiency.</p>
-                                <h2 class="vertical-counter d-inline-flex text-dark-gray fw-700 ls-minus-2px mt-25 mb-0" data-text="%" data-to="50"><sup class="text-dark-gray top-0"><i class="feather icon-feather-arrow-up icon-extra-medium"></i></sup></h2>
+                        <!-- Value 4 -->
+                        <div class="col icon-with-text-style-01">
+                            <div class="feature-box feature-box-left-icon last-paragraph-no-margin bg-white border-radius-8px p-4 box-shadow-small h-100">
+                                <div class="feature-box-icon">
+                                    <i class="feather icon-feather-award fs-40 text-base-color mb-20px d-block"></i>
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="d-inline-block alt-font text-dark-gray fw-700 fs-18 mb-5px">Customer Success</span>
+                                    <p>Your success is our priority. We focus on delivering solutions that add real value to your business.</p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="row align-items-center mb-5 mt-8 sm-mb-30px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="col-12 text-center">
+                            <span class="text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 bg-white border border-color-extra-medium-gray border-radius-100px ps-20px pe-20px pt-5px pb-5px d-inline-flex mb-15px">Benefits</span>
+                            <h2 class="alt-font text-dark-gray fw-700">Why Choose Us</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-0 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="col-lg-10">
+                            <div class="accordion accordion-style-02" id="accordion-style-02" data-active-icon="icon-feather-minus" data-inactive-icon="icon-feather-plus">
+                                <!-- Accordion Item 1 -->
+                                <div class="accordion-item active-accordion">
+                                    <div class="accordion-header border-bottom border-color-extra-medium-gray">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-01" aria-expanded="true" data-bs-parent="#accordion-style-02">
+                                            <div class="accordion-title mb-0 position-relative text-dark-gray fw-600">
+                                                <i class="feather icon-feather-minus fs-20"></i><span class="fs-18 alt-font">Business-Focused Approach</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="accordion-style-02-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-02">
+                                        <div class="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
+                                            <p>We understand that technology should support your business — not complicate it.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion Item 2 -->
+                                <div class="accordion-item">
+                                    <div class="accordion-header border-bottom border-color-extra-medium-gray">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-02" aria-expanded="false" data-bs-parent="#accordion-style-02">
+                                            <div class="accordion-title mb-0 position-relative text-dark-gray fw-600">
+                                                <i class="feather icon-feather-plus fs-20"></i><span class="fs-18 alt-font">End-to-End IT Solutions</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="accordion-style-02-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
+                                        <div class="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
+                                            <p>From daily support to strategic projects, we cover all aspects of your IT environment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion Item 3 -->
+                                <div class="accordion-item">
+                                    <div class="accordion-header border-bottom border-color-extra-medium-gray">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03" aria-expanded="false" data-bs-parent="#accordion-style-02">
+                                            <div class="accordion-title mb-0 position-relative text-dark-gray fw-600">
+                                                <i class="feather icon-feather-plus fs-20"></i><span class="fs-18 alt-font">Security-First Mindset</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="accordion-style-02-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
+                                        <div class="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
+                                            <p>We prioritize protecting your systems, data, and operations at every level.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion Item 4 -->
+                                <div class="accordion-item">
+                                    <div class="accordion-header border-bottom border-color-extra-medium-gray">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-04" aria-expanded="false" data-bs-parent="#accordion-style-02">
+                                            <div class="accordion-title mb-0 position-relative text-dark-gray fw-600">
+                                                <i class="feather icon-feather-plus fs-20"></i><span class="fs-18 alt-font">Responsive Support</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="accordion-style-02-04" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
+                                        <div class="accordion-body last-paragraph-no-margin border-bottom border-color-extra-medium-gray">
+                                            <p>We provide reliable and timely support to keep your business running smoothly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion Item 5 -->
+                                <div class="accordion-item">
+                                    <div class="accordion-header border-bottom border-color-transparent">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-05" aria-expanded="false" data-bs-parent="#accordion-style-02">
+                                            <div class="accordion-title mb-0 position-relative text-dark-gray fw-600">
+                                                <i class="feather icon-feather-plus fs-20"></i><span class="fs-18 alt-font">Scalable Solutions</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="accordion-style-02-05" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
+                                        <div class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent">
+                                            <p>Our services grow with your business, ensuring long-term value.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end section -->
+
+            <!-- start section -->
+            <section class="cover-background pb-0" style="background-image: url('images/binolex/bg.png')">
+                <div class="container pb-8">
+                    <div class="bg-base-color border-radius-10px p-5 text-center box-shadow-large" style="background-image: url('images/binolex/bgpage.jpg'); margin-top: 170.984px;" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h3 class="alt-font text-white fw-700 mb-20px">Let’s Build Something Reliable Together</h3>
+                        <p class="text-white opacity-8 w-70 md-w-90 sm-w-100 mx-auto mb-30px fs-18 lg-fs-16">
+                            At Bi-nex Technology Solutions Limited, we are committed to helping your business succeed through dependable and innovative technology. Whether you need ongoing IT support, cloud solutions, or a complete infrastructure upgrade, our team is ready to help.
+                        </p>
+                        <a href="{{ url('/contact') }}" class="btn btn-large btn-dark-gray btn-box-shadow btn-rounded fw-600">Get in Touch Today<i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </section>

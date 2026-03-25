@@ -1,12 +1,12 @@
-@extends('admin_2.layouts.app')
+@extends('admin.layouts.app')
 
 @section('title', 'Contact Submissions')
 
 @section('content')
 <div class="flex items-center justify-between mb-6">
     <div>
-        <h1 class="text-2xl font-bold text-gray-800">Messages</h1>
-        <p class="text-gray-500 text-sm mt-1">View messages submitted through the website contact form.</p>
+        <h1 class="text-2xl font-bold text-gray-800">Contact and Social Media</h1>
+        <p class="text-gray-500 text-sm mt-1">View messages and social media submissions through the website.</p>
     </div>
 </div>
 
@@ -45,7 +45,7 @@
                             <button type="button" class="text-blue-600 hover:text-blue-800 p-2 border border-blue-200 hover:bg-blue-50 bg-white rounded transition-colors" title="View Full Message" onclick="alert('From: {{ $submission->name }}\nEmail: {{ $submission->email }}\nPhone: {{ $submission->phone }}\nDate: {{ $submission->created_at->format('M d, Y h:i A') }}\n\nMessage:\n{{ addslashes($submission->message) }}')">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <form action="{{ route('admin_2.contact_submissions.destroy', $submission) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this message?');">
+                            <form action="{{ route('admin.contact_submissions.destroy', $submission) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this message?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="text-red-600 hover:text-red-800 p-2 border border-red-200 hover:bg-red-50 bg-white rounded transition-colors" title="Delete">
@@ -60,7 +60,7 @@
                     <td colspan="5" class="px-6 py-8 text-center text-gray-500">
                         <div class="flex flex-col items-center">
                             <i class="fas fa-envelope-open-text text-4xl mb-3 text-gray-300"></i>
-                            <p>No messages received yet.</p>
+                            <p>No submissions received yet.</p>
                         </div>
                     </td>
                 </tr>

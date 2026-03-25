@@ -12,19 +12,18 @@ class ClientController extends Controller
     public function index()
     {
         $clients = Client::latest()->paginate(10);
-        return view('admin_2.clients.index', compact('clients'));
+        return view('admin.clients.index', compact('clients'));
     }
 
     public function create()
     {
-        return view('admin_2.clients.create');
+        return view('admin.clients.create');
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'required|string',
             'logo' => 'required|image|max:2048', // 2MB max
             'is_active' => 'boolean',
         ]);
@@ -44,19 +43,18 @@ class ClientController extends Controller
 
         Client::create($validated);
 
-        return redirect()->route('admin_2.clients.index')->with('success', 'Client added successfully.');
+        return redirect()->route('admin.clients.index')->with('success', 'Client added successfully.');
     }
 
     public function edit(Client $client)
     {
-        return view('admin_2.clients.edit', compact('client'));
+        return view('admin.clients.edit', compact('client'));
     }
 
     public function update(Request $request, Client $client)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'required|string',
             'logo' => 'nullable|image|max:2048', // optional on update
             'is_active' => 'boolean',
         ]);
@@ -81,7 +79,7 @@ class ClientController extends Controller
 
         $client->update($validated);
 
-        return redirect()->route('admin_2.clients.index')->with('success', 'Client updated successfully.');
+        return redirect()->route('admin.clients.index')->with('success', 'Client updated successfully.');
     }
 
     public function destroy(Client $client)
@@ -92,6 +90,6 @@ class ClientController extends Controller
         
         $client->delete();
         
-        return redirect()->route('admin_2.clients.index')->with('success', 'Client deleted successfully.');
+        return redirect()->route('admin.clients.index')->with('success', 'Client deleted successfully.');
     }
 }

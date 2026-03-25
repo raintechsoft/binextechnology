@@ -9,12 +9,18 @@
                             <div class="col-lg-6 col-md-5 text-end d-none d-md-flex">
                                 @php
                                     $settings = \App\Models\SiteSetting::first();
+                                    $contact = \App\Models\ContactDetail::first();
                                 @endphp
-                                @if($settings && $settings->email)
-                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:{{ $settings->email }}" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>{{ $settings->email }}</a></div>
+                                @if(($contact && $contact->email) || ($settings && $settings->email))
+                                <div class="widget me-20px lg-me-25px md-me-0"><a href="mailto:{{ $contact->email ?? $settings->email }}" class="fs-14 fw-500 text-dark-gray"><i class="feather icon-feather-mail fs-16 text-base-color"></i>{{ $contact->email ?? $settings->email }}</a></div>
                                 @endif
-                                @if($settings && $settings->address)
-                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>{{ $settings->address }}</div> 
+                                @if($contact && $contact->address)
+                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block" title="{{ $contact->address }}"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>{{ \Illuminate\Support\Str::limit($contact->address, 35) }}</div> 
+                                @elseif($settings && $settings->address)
+                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block" title="{{ $settings->address }}"><i class="feather icon-feather-map-pin fs-16 text-base-color"></i>{{ \Illuminate\Support\Str::limit($settings->address, 35) }}</div> 
+                                @endif
+                                @if($contact && $contact->phone_number)
+                                <div class="widget fs-14 fw-500 text-dark-gray d-none d-lg-inline-block ms-15px"><i class="feather icon-feather-phone fs-16 text-base-color"></i>{{ $contact->phone_number }}</div> 
                                 @endif
                             </div>
                         </div>
@@ -77,7 +83,7 @@
                         <div class="col-auto text-end d-none d-sm-flex">
                             <div class="header-icon"> 
                                 <div class="header-button ms-10px d-none d-xl-inline-block">
-                                    <a href="mailto:{{ \App\Models\SiteSetting::first()->email ?? 'info@binex.ie' }}" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
+                                    <a href="mailto:{{ \App\Models\ContactDetail::first()?->email ?? \App\Models\SiteSetting::first()?->email ?? 'info@binex.ie' }}" class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
                                         <span>
                                             <span class="btn-double-text" data-text="Get started">Get started</span>
                                             <span><i class="feather icon-feather-mail"></i></span>

@@ -34,7 +34,7 @@
                 <p class="text-gray-400">Sign in to the Admin Panel</p>
             </div>
 
-            <form method="POST" action="{{ route('admin_2.login.submit') }}">
+            <form method="POST" action="{{ route('admin.login.submit') }}">
                 @csrf
 
                 <div class="mb-5">
