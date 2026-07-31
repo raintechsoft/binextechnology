@@ -16,6 +16,8 @@ use Filament\Tables\Table;
 
 class ClientResource extends Resource
 {
+    protected static bool $isDiscovered = false;
+
     protected static ?string $model = Client::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;

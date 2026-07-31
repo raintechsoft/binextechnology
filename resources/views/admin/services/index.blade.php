@@ -51,7 +51,7 @@
                         @endif
                     </td>
                     <td class="px-6 py-4 text-right">
-                        <div class="flex justify-end gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="flex justify-end gap-2">
                             <a href="{{ route('admin.services.edit', $service) }}" class="text-blue-400 hover:text-white p-2 border border-slate-700 hover:border-blue-500/50 hover:bg-blue-500/20 bg-slate-800/50 rounded-lg transition-all" title="Edit">
                                 <i class="fas fa-edit"></i>
                             </a>
